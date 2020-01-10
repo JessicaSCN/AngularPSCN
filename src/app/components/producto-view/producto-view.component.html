@@ -1,0 +1,66 @@
+
+<div class='container main-container'>
+
+                <!-- Header producto -->
+                <h1 class="my-4 animated fadeIn">{{producto.nombre}}  <small>U$S{{producto.precio}}</small> <hr>   </h1> 
+               
+              
+                <!-- Producto Row-->
+                <div class="row animated fadeIn "  >
+              
+                  <div class="col-md-8">
+                    <img class="img-fluid " [src]="producto.img"  alt="">
+                  </div>
+              
+                  <div class="col-md-4">
+                    <h3 class="my-3"> Descripción del producto <img  class="img-fluid" [src]='producto.marca.img'>
+                    </h3>
+                    <p> {{producto.descripcion}}</p><h3 class="my-3">Detalles del producto</h3>
+                    <ul>
+                      <li>Lorem Ipsum</li>
+                      <li>Dolor Sit Amet</li>
+                      <li>Consectetur</li>
+                      <li>Adipiscing Elit</li>
+                    </ul>
+                  </div>
+              
+                </div>
+                <!-- /.row -->
+
+                 <!-- Productos Relacionados proximamente ngFor -->
+  <h3 class="my-4">Productos relacionados</h3>
+
+  <div class="row">
+
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+    </div>
+
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+    </div>
+
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+    </div>
+
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+    </div>
+
+  </div>
+  <!-- /.row -->
+              
+                
+        
+
+</div>
+

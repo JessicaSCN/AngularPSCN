@@ -1,0 +1,90 @@
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h1>Bienvenido!</h1>
+              <h3 class="login-heading mb-4">Iniciar sesion</h3>
+
+              <form
+                (ngSubmit)="login(registroForm)"
+                class="form-signin"
+                #registroForm="ngForm"
+              >
+                <div class="form-label-group">
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Email address"
+                    [(ngModel)]="usuario.email"
+                    required
+                    email
+                  />
+                </div>
+
+                <span
+                  *ngIf="
+                    registroForm.submitted &&
+                    registroForm.controls['email'].errors
+                  "
+                  class="text-danger"
+                  >El correo es obligatorio</span
+                >
+
+                <div class="form-label-group">
+                  <input
+                    type="password"
+                    name="password"
+                    class="form-control"
+                    placeholder="Password"
+                    [(ngModel)]="usuario.password"
+                    required
+                    minlength="6"
+                  />
+                </div>
+                <span
+                  *ngIf="
+                    registroForm.submitted &&
+                    registroForm.controls['password'].errors
+                  "
+                  class="text-danger"
+                  >La contraseña es obligatoria</span
+                >
+                <div class="form-label-group">
+                  <input
+                  
+                    [(ngModel)]="recordarme"
+                    type="checkbox"
+                    name="remember-me"
+                    class="custom-checkbox"
+                    id="checkBoxRecordar"
+                  />
+                  <label for="checkBoxRecordar">&nbsp; Recordar usuario</label>
+                
+                </div>
+                <br />
+                <br />
+
+                <button
+                  class="btn btn-lg btn-primary btn-block text-uppercase"
+                  type="submit"
+                >
+                  Iniciar Sesion
+                </button>
+                <a
+                  class="d-block text-center mt-2 small"
+                  [routerLink]="['/register']"
+                  >¿No tienes cuenta? Registrate</a
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
