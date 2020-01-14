@@ -6,19 +6,19 @@ import { CategoriaModel } from '../models/categoria.model';
 export class CategoriaService {
   private categorias: CategoriaModel[] = [
     {
-      id: "0",
+      id: '0',
       nombre: 'Cocina',
     },
     {
-      id: "1",
+      id: '1',
       nombre: 'Indumentaria',
     },
     {
-      id: "2",
+      id: '2',
       nombre: 'Informatica',
     },
     {
-      id: "3",
+      id: '3',
       nombre: 'Hogar',
     }
   ];
