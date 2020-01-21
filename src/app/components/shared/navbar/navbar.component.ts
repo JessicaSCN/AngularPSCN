@@ -14,19 +14,19 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  isAutenticado(): boolean{
+  isAutenticado(): boolean {
 
     return this.auth.isAutenticado();
 
   }
 
-  logout(){
+  logout() {
 
     this.auth.logout();
     this.router.navigateByUrl('/login');
   }
 
-  buscarProductos(termino: string){
+  buscarProductos(termino: string) {
 
     console.log(termino);
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(25, 25, 117);">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgb(25, 25, 117);">
     <a class="navbar-brand" href="#">
         <img src="assets/img/logo.png" height="30" alt="">
       </a>
@@ -6,6 +6,8 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+  
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
@@ -15,11 +17,22 @@
         <li class="nav-item " routerLinkActive="active">
           <a class="nav-link" [routerLink]="['productos']">Productos</a>
         </li>
+
+        <li class="nav-item " routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['categorias']">Categorías</a>
+        </li>
          
 
       </ul>
 
-    
+    <!-- Buscador -->
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="buscar" placeholder="Buscar" aria-label="Buscar">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+
+    <!--  -->
 
      
 

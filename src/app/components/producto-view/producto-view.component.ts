@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router';
-import { ProductosService } from "../../services/productos.services";
+import { ProductosService } from '../../services/productos.services';
 import { ProductoModel } from '../../models/producto.model';
 import { CategoriaService } from '../../services/categoria.services';
 import { CategoriaModel } from 'src/app/models/categoria.model';

@@ -13,7 +13,7 @@ import { AltaListadoCategoriaComponent } from './components/admin/alta-listado-c
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent }, // canActivate: [AuthGuard]
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'productos', component: ProductosComponent },
    { path: 'producto/:id', component: ProductoViewComponent },

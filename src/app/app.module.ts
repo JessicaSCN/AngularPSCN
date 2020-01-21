@@ -36,6 +36,8 @@ import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { CategoriaComponent } from './components/categoria/categoria.component';
+
 
 
 @NgModule({
@@ -52,7 +54,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     FormComponent,
     ListadoProductosComponent,
     CrearProductoComponent,
-    AltaListadoCategoriaComponent
+    AltaListadoCategoriaComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,
