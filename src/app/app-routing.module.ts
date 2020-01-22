@@ -10,6 +10,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { ListadoProductosComponent } from './components/admin/listado-productos/listado-productos.component';
 import { CrearProductoComponent } from './components/admin/crear-producto/crear-producto.component';
 import { AltaListadoCategoriaComponent } from './components/admin/alta-listado-categoria/alta-listado-categoria.component';
+import { MailingComponent } from './components/mailing/mailing.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
    { path: 'admin/listado-productos', component: ListadoProductosComponent },
    { path: 'admin/producto/nuevo', component: CrearProductoComponent },
    { path: 'admin/listado-categorias', component: AltaListadoCategoriaComponent },
+   { path: 'mailing', component: MailingComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

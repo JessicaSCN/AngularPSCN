@@ -12,9 +12,11 @@ export class ProductoModel {
         marca: MarcaModel;
         activo: boolean;
         categoria: CategoriaModel;
+        mailing: boolean;
 
         constructor() {
                 this.activo = true;
+                this.mailing = false;
                 this.marca = new MarcaModel();
                 this.categoria = new CategoriaModel();
         }
