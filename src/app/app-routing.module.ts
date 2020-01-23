@@ -11,6 +11,8 @@ import { ListadoProductosComponent } from './components/admin/listado-productos/
 import { CrearProductoComponent } from './components/admin/crear-producto/crear-producto.component';
 import { AltaListadoCategoriaComponent } from './components/admin/alta-listado-categoria/alta-listado-categoria.component';
 import { MailingComponent } from './components/mailing/mailing.component';
+import { OfertaComponent } from './components/oferta/oferta.component';
+import { ServiciosComponent } from './components/servicios/servicios.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,8 @@ const routes: Routes = [
    { path: 'admin/producto/nuevo', component: CrearProductoComponent },
    { path: 'admin/listado-categorias', component: AltaListadoCategoriaComponent },
    { path: 'mailing', component: MailingComponent },
+   { path: 'oferta', component: OfertaComponent },
+   { path: 'servicios', component: ServiciosComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

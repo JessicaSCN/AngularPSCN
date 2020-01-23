@@ -18,7 +18,8 @@ export class ProductosService {
       marca: { id: '0', nombre: 'Microsoft', img: 'assets/img/marcas/microsoft.jpg' }
       , activo: true,
       categoria: {nombre: 'Hogar' , id: '1'},
-      mailing: false
+      mailing: false,
+      oferta: false
 
     },
     {
@@ -32,7 +33,8 @@ export class ProductosService {
       marca: { id: '1'  , nombre: 'Sony', img: 'assets/img/marcas/sony.png' }
       , activo: true,
       categoria: {nombre: 'Hogar' , id: '1'},
-      mailing: false
+      mailing: true,
+      oferta: false
     },
     {
       id: '2',
@@ -45,7 +47,8 @@ export class ProductosService {
       marca: { id: '2', nombre: 'Xiaomi', img: 'assets/img/marcas/xiaomi.jpg' }
       , activo: true,
       categoria: {nombre: 'Hogar' , id: '1'},
-      mailing: false
+      mailing: false,
+      oferta: true
     },
     {
       id: '3',
@@ -58,7 +61,8 @@ export class ProductosService {
       marca: { id: '3' , nombre: 'Iphone', img: 'assets/img/marcas/iphone.jpg' }
       , activo: true,
       categoria: {nombre: 'Hogar' , id: '1'},
-      mailing: true
+      mailing: true,
+      oferta: false
     },
     {
       id: '4',
@@ -72,7 +76,8 @@ export class ProductosService {
       marca: { id: '1' , nombre: 'Sony', img: 'assets/img/marcas/sony.png' }
       , activo: true,
       categoria: {nombre: 'Hogar' , id: '1'},
-      mailing: true
+      mailing: true,
+      oferta: false
     }
   ];
 
@@ -93,25 +98,14 @@ export class ProductosService {
   }
 
   getProductosMailing() {
-
-    let productoMailing = new ProductoModel();
-
-    // tslint:disable-next-line: prefer-for-of
-    for (let i = 0; i < this.productos.length; i++) {
-
-      if (this.productos[i].mailing === true) {
-
-        productoMailing = this.productos[i];
-
-
-      }
-    }
-    return productoMailing;
-
+    return this.productos.filter(x => x.mailing === true);
 
   }
 
+  getProductosOferta() {
+    return this.productos.filter(x => x.oferta === true);
 
+  }
 
   getProductoById(id: string): ProductoModel {
     return this.productos.filter(x => x.id.toString() === id)[0];

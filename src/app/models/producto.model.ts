@@ -13,6 +13,7 @@ export class ProductoModel {
         activo: boolean;
         categoria: CategoriaModel;
         mailing: boolean;
+        oferta: boolean;
 
         constructor() {
                 this.activo = true;

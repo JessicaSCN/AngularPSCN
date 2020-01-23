@@ -38,6 +38,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { MailingComponent } from './components/mailing/mailing.component';
+import { OfertaComponent } from './components/oferta/oferta.component';
+import { ServiciosComponent } from './components/servicios/servicios.component';
 
 
 
@@ -57,7 +59,9 @@ import { MailingComponent } from './components/mailing/mailing.component';
     CrearProductoComponent,
     AltaListadoCategoriaComponent,
     CategoriaComponent,
-    MailingComponent
+    MailingComponent,
+    OfertaComponent,
+    ServiciosComponent
   ],
   imports: [
     BrowserModule,

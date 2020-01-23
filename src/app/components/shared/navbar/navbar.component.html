@@ -18,10 +18,17 @@
           <a class="nav-link" [routerLink]="['productos']">Productos</a>
         </li>
 
-      <li class="nav-item " routerLinkActive="active">
+        <li class="nav-item " routerLinkActive="active">
           <a class="nav-link" [routerLink]="['mailing']">Mailing</a>
         </li> 
 
+        <li class="nav-item " routerLinkActive="active">
+          <a class="nav-link fas fa-money-check-alt" [routerLink]="['oferta']">Ofertas</a>
+        </li> 
+
+        <li class="nav-item " routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['servicios']">Servicios</a>
+        </li>
         
 
       </ul>
@@ -29,6 +36,7 @@
     <!-- Buscador -->
 
     <form class="form-inline my-2 my-lg-0">
+      
       <input class="form-control mr-sm-2" type="buscar" placeholder="Buscar" aria-label="Buscar">
       <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
     </form>

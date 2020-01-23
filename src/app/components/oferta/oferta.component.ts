@@ -3,11 +3,11 @@ import { ProductosService } from '../../services/productos.services';
 import { ProductoModel } from '../../models/producto.model';
 
 @Component({
-  selector: 'app-mailing',
-  templateUrl: './mailing.component.html',
-  styleUrls: ['./mailing.component.css']
+  selector: 'app-oferta',
+  templateUrl: './oferta.component.html',
+  styleUrls: ['./oferta.component.css']
 })
-export class MailingComponent implements OnInit {
+export class OfertaComponent implements OnInit {
 
   productos: ProductoModel[] = [];
 
@@ -17,10 +17,8 @@ export class MailingComponent implements OnInit {
 
   }
 
-
   ngOnInit() {
-    this.productos = this.productosService.getProductosMailing();
-
+    this.productos = this.productosService.getProductosOferta();
   }
 
 }
