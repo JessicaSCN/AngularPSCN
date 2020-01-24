@@ -9,16 +9,14 @@ import { ProductoModel } from '../../models/producto.model';
 export class ProductosComponent implements OnInit {
 
   productos: ProductoModel[] = [];
-
+  
   constructor(private productosService: ProductosService) {
-
-
-
 
   }
 
   ngOnInit() {
     this.productos = this.productosService.getProductos();
+
   }
 
 }

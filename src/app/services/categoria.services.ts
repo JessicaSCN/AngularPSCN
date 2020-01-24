@@ -7,20 +7,41 @@ export class CategoriaService {
   private categorias: CategoriaModel[] = [
     {
       id: '0',
-      nombre: 'Cocina',
+      nombre: 'Impresoras',
     },
     {
       id: '1',
-      nombre: 'Indumentaria',
+      nombre: 'Computadoras',
     },
     {
       id: '2',
-      nombre: 'Informatica',
+      nombre: 'Celulares',
     },
     {
       id: '3',
-      nombre: 'Hogar',
+      nombre: 'Componentes',
+    },
+    {
+      id: '4',
+      nombre: 'Proyectores',
+    },
+    {
+      id: '5',
+      nombre: 'Accesorios',
+    },
+    {
+      id: '6',
+      nombre: 'Monitores',
+    },
+    {
+      id: '7',
+      nombre: 'Seguridad',
+    },
+    {
+      id: '8',
+      nombre: 'Games',
     }
+
   ];
 
   public url = '';
@@ -31,10 +52,10 @@ export class CategoriaService {
 
   getCategorias() {
     return this.categorias;
-  };
+  }
 
   getCategoriaById(id: string): CategoriaModel {
-    return this.categorias.filter(x => x.id.toString() == id)[0];
+    return this.categorias.filter(x => x.id.toString() === id)[0];
   }
 }
 

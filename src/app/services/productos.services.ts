@@ -87,6 +87,8 @@ export class ProductosService {
     console.log('ProductosService ');
   }
 
+          // Productos
+
   saveProducto() {
 
     // this.http.post()
@@ -110,6 +112,10 @@ export class ProductosService {
   getProductoById(id: string): ProductoModel {
     return this.productos.filter(x => x.id.toString() === id)[0];
   }
+
+
+     // Categorias
+
 
 }
 

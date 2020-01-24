@@ -5,9 +5,87 @@
   <br>
   <h1 class="animated fadeIn fast">Productos</h1>
   <hr />
-<!--  *ngFor="let producto of productos"-->
-  <div class="card-columns animated fadeIn fast">
-    <div class="card" *ngFor="let producto of productos; let i = index">
+
+
+<!-- Categorias generales -->
+
+<ul class="btn-group" style="position: relative; display: block;">
+  <button type="button" class="btn btn-light">Impresoras</button>
+  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <li class="dropdown-divider"></li>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </ul>
+</ul>
+
+
+<ul class="btn-group" style="position: relative; display: block;">
+  <button type="button" class="btn btn-light">Computadoras</button>
+  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <li class="dropdown-divider"></li>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </ul>
+</ul>
+
+
+<ul class="btn-group" style="position: relative; display: block;">
+  <button type="button" class="btn btn-light">Celulares</button>
+  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <li class="dropdown-divider"></li>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </ul>
+</ul>
+
+<ul class="btn-group" style="position: relative; display: block;">
+  <button type="button" class="btn btn-light">Componentes</button>
+  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <li class="dropdown-divider"></li>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </ul>
+</ul>
+
+<ul class="btn-group" style="position: relative; display: block;">
+  <button type="button" class="btn btn-light">Proyectores</button>
+  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <li class="dropdown-divider"></li>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </ul>
+</ul>
+                      <!--  -->
+
+                      <!-- Cards with the images  -->
+                      <!-- col-md-10 col-md-offset--20  -->
+  <div class="card-columns animated fadeIn fast ml-auto card w-500 col-md-5" >
+    <div class="card border-secondary" *ngFor="let producto of productos; let i = index" >
       <img [src]="producto.img" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">{{producto.nombre}}</h5>
