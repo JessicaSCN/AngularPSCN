@@ -40,6 +40,7 @@ import { CategoriaComponent } from './components/categoria/categoria.component';
 import { MailingComponent } from './components/mailing/mailing.component';
 import { OfertaComponent } from './components/oferta/oferta.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
+import { FiltrosComponent } from './components/filtros/filtros.component';
 
 
 
@@ -61,7 +62,8 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
     CategoriaComponent,
     MailingComponent,
     OfertaComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    FiltrosComponent
   ],
   imports: [
     BrowserModule,
