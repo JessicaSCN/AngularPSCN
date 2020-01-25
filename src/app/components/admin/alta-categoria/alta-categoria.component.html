@@ -1,10 +1,13 @@
+                    
+                        <!-- Alta CATEGORIAS Y FILTROS DE LAS MISMAS -->
+
 <br>
 <br>
 <div class="container main-container">
   <div class="row ">
-    <div class="col"><h2>Alta de producto</h2></div>
+    <div class="col"><h2>Alta de categoria</h2></div>
     <div class="col text-right">
-      <button routerLink="/admin/listado-productos" class="btn btn-danger ">
+      <button routerLink="/admin/listado-categoria" class="btn btn-danger ">
         <i class="fa fa-arrow-left"></i>
         Regresar
       </button>
@@ -12,53 +15,60 @@
   </div>
   <div class="row animated fadeIn">
     <div class="col">
-      <form (ngSubmit)="altaProducto(f)" #f="ngForm">
+      <form (ngSubmit)="altaCategoria(f)" #f="ngForm">
         <div class="form-group">
           <label>Id</label>
           <input
             type="text"
             class="form-control"
             name="id"
-            [(ngModel)]="producto.id"
+            [(ngModel)]="categoria.id"
             disabled
           />
           <small class="form-text text-muted">Campo autogenerado</small>
         </div>
 
-        <div class="form-group">
-          <label>Nombre</label>
+        <div class="form-group col">
+            <label>Nombre</label>
+            <select
+              class="form-control"
+              name="nombre"
+              [(ngModel)]="categoria.nombre"
+              id=""
+            >
+              <option *ngFor="let categoria of categorias" [value]="categoria.id">{{
+                categoria.nombre
+              }}</option>
+            </select>
+          </div>
+
+
+        <div class="form-group col-md-4 mb-3">
+          <label>Categoría principal</label>
           <input
-            type="text"
+            type="string"
+            name="catP"
+            [(ngModel)]="categoria.catPrincipal"
             class="form-control"
-            name="nombre"
-            [(ngModel)]="producto.nombre"
             required
           />
         </div>
 
-        <div class="form-group">
-          <label>Precio</label>
-          <input
-            type="number"
-            name="precio"
-            [(ngModel)]="producto.precio"
-            class="form-control"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label>Marca</label>
+        <div class="form-group col-md-4 mb-3" >
+          <label>Subcategorías</label>
           <input
             type="text"
             class="form-control"
             name="id"
-            [(ngModel)]="producto.marca.nombre"
+            [(ngModel)]="categoria.subCategorias"
             required
+            
           />
+          <button class="btn badge-info">+</button>
+          
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
                 <div class="form-group col">
                         <label>Marca</label>
                         <select
@@ -89,43 +99,30 @@
                                 </select>
                               </div>
                 </div>
-              </div>
+              </div> -->
 
         
 
        
 
-        <div class="form-group">
-          <label>Descripcion</label>
-          <textarea
+        <div class="col-md-4 mb-3 input-group">
+          <label>Filtros</label>
+          <input id="Filtro"
             id=""
-            rows="4"
-            name="descripcion"
-            [(ngModel)]="producto.descripcion"
+            name="filtros"
+            [(ngModel)]="categoria.filtros"
             class="form-control"
             required
-          ></textarea>
+          />
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="button" onclick="mostrarPassword()"> 
+                <span class="fas fa-plus-square"></span>
+            </button>
+          </span>
+          
         </div>
 
-        <div class="form-group">
-          <label>Estado</label>
-          <br />
-
-          <button
-            class="btn btn-outline-success w-25"
-            *ngIf="producto.activo"
-            (click)="producto.activo = false"
-          >
-            <i class="fas fa-play"></i>
-          </button>
-          <button
-            class="btn btn-outline-secondary w-25 "
-            *ngIf="!producto.activo"
-            (click)="producto.activo = true"
-          >
-            <i class="fas fa-pause"></i>
-          </button>
-        </div>
+   
         <hr />
         <br />
 
@@ -138,3 +135,4 @@
     </div>
   </div>
 </div>
+

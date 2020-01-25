@@ -17,7 +17,7 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '0', nombre: 'Microsoft', img: 'assets/img/marcas/microsoft.jpg' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1'},
+      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Hogar', subCategorias: 'Hogar', filtros: 'Nuevo'},
       mailing: false,
       oferta: false
 
@@ -32,7 +32,7 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '1'  , nombre: 'Sony', img: 'assets/img/marcas/sony.png' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1'},
+      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Hogar', subCategorias: 'Hogar', filtros: 'Nuevo'},
       mailing: true,
       oferta: false
     },
@@ -46,7 +46,7 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '2', nombre: 'Xiaomi', img: 'assets/img/marcas/xiaomi.jpg' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1'},
+      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Hogar', subCategorias: 'Hogar', filtros: 'Nuevo'},
       mailing: false,
       oferta: true
     },
@@ -60,7 +60,7 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '3' , nombre: 'Iphone', img: 'assets/img/marcas/iphone.jpg' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1'},
+      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Hogar', subCategorias: 'Hogar', filtros: 'Nuevo'},
       mailing: true,
       oferta: false
     },
@@ -75,7 +75,7 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '1' , nombre: 'Sony', img: 'assets/img/marcas/sony.png' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1'},
+      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Hogar', subCategorias: 'Hogar', filtros: 'Nuevo'},
       mailing: true,
       oferta: false
     }

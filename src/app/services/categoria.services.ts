@@ -8,38 +8,67 @@ export class CategoriaService {
     {
       id: '0',
       nombre: 'Impresoras',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Impresoras',
+      filtros: 'Impresoras'
+
     },
     {
       id: '1',
       nombre: 'Computadoras',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Impresoras',
+      filtros: 'Impresoras'
     },
     {
       id: '2',
       nombre: 'Celulares',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Impresoras',
+      filtros: 'Impresoras'
     },
     {
       id: '3',
       nombre: 'Componentes',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Impresoras',
+      filtros: 'Impresoras'
     },
     {
       id: '4',
       nombre: 'Proyectores',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Impresoras',
+      filtros: 'Impresoras'
     },
     {
       id: '5',
       nombre: 'Accesorios',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Impresoras',
+      filtros: 'Impresoras'
     },
     {
       id: '6',
       nombre: 'Monitores',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Impresoras',
+      filtros: 'Impresoras'
+
     },
     {
       id: '7',
       nombre: 'Seguridad',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Impresoras',
+      filtros: 'Impresoras'
     },
     {
       id: '8',
       nombre: 'Games',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Impresoras',
+      filtros: 'Impresoras'
     }
 
   ];

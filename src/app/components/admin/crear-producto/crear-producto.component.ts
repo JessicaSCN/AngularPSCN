@@ -33,7 +33,7 @@ export class CrearProductoComponent implements OnInit {
   ngOnInit() {
   }
 
-  altaProducto( form: NgForm){
+  altaProducto( form: NgForm) {
 
     console.log(form);
     console.log(this.producto);

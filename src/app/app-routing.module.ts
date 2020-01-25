@@ -13,6 +13,7 @@ import { AltaListadoCategoriaComponent } from './components/admin/alta-listado-c
 import { MailingComponent } from './components/mailing/mailing.component';
 import { OfertaComponent } from './components/oferta/oferta.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
+import { AltaCategoriaComponent } from './components/admin/alta-categoria/alta-categoria.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
    { path: 'admin/listado-productos', component: ListadoProductosComponent },
    { path: 'admin/producto/nuevo', component: CrearProductoComponent },
    { path: 'admin/listado-categorias', component: AltaListadoCategoriaComponent },
+   { path: 'admin/categoria/nuevo', component: AltaCategoriaComponent },
    { path: 'mailing', component: MailingComponent },
    { path: 'oferta', component: OfertaComponent },
    { path: 'servicios', component: ServiciosComponent },
