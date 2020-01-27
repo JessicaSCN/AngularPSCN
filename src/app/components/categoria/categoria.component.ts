@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CategoriaModel } from 'src/app/models/categoria.model';
 import { CategoriaService } from 'src/app/services/categoria.services';
+import { ProductosComponent } from '../productos/productos.component';
 
 @Component({
   selector: 'app-categoria',
@@ -10,6 +11,7 @@ import { CategoriaService } from 'src/app/services/categoria.services';
 export class CategoriaComponent implements OnInit {
 
   categoria: CategoriaModel[] = [];
+
   constructor(private categoriaService: CategoriaService) {
 
   }

@@ -8,7 +8,7 @@ export class CategoriaModel {
     subCategorias: string;
     filtros: string;
 
-    constructor(){
+    constructor() {
        
     }
 }

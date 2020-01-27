@@ -1,6 +1,4 @@
-
-  
-<div class='container main-container'>
+  <div class='container main-container'>
   <br>
   <br>
   <h1 class="animated fadeIn fast">Productos</h1>
@@ -9,22 +7,24 @@
 
 <!-- Categorias generales -->
 
-<ul class="btn-group" style="position: relative; display: block;">
-  <button type="button" class="btn btn-light">Impresoras</button>
+<!--  -->
+
+<ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;">
+  <button type="button" class="btn btn-light"  >Impresoras</button>
   <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">A</a>  <!-- {{categoria.subCategorias}} -->
+    <a class="dropdown-item" href="#">B</a>
+    <a class="dropdown-item" href="#">C</a>
     <li class="dropdown-divider"></li>
     <a class="dropdown-item" href="#">Separated link</a>
   </ul>
 </ul>
 
 
-<ul class="btn-group" style="position: relative; display: block;">
+<ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;">
   <button type="button" class="btn btn-light">Computadoras</button>
   <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
@@ -39,7 +39,7 @@
 </ul>
 
 
-<ul class="btn-group" style="position: relative; display: block;">
+<ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;">
   <button type="button" class="btn btn-light">Celulares</button>
   <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
@@ -53,7 +53,7 @@
   </ul>
 </ul>
 
-<ul class="btn-group" style="position: relative; display: block;">
+<ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;">
   <button type="button" class="btn btn-light">Componentes</button>
   <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
@@ -67,7 +67,7 @@
   </ul>
 </ul>
 
-<ul class="btn-group" style="position: relative; display: block;">
+<ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;">
   <button type="button" class="btn btn-light">Proyectores</button>
   <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
@@ -84,8 +84,8 @@
 
                       <!-- Cards with the images  -->
                       <!-- col-md-10 col-md-offset--20  -->
-  <div class="card-columns animated fadeIn fast ml-auto card w-500 col-md-5" >
-    <div class="card border-secondary" *ngFor="let producto of productos; let i = index" >
+  <div class="card-columns animated fadeIn fast col-md-12">
+    <div class="card " *ngFor="let producto of productos; let i = index" >
       <img [src]="producto.img" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">{{producto.nombre}}</h5>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ProductoModel } from '../models/producto.model';
 import { ProductosComponent } from '../components/productos/productos.component';
 import { MailingComponent } from '../components/mailing/mailing.component';
+import { CategoriaModel } from '../models/categoria.model';
 
 @Injectable()
 export class ProductosService {
@@ -116,6 +117,9 @@ export class ProductosService {
 
      // Categorias
 
+     getPrByCat(Event, Categoria: CategoriaModel) {
+      return this.productos.filter(x => x.categoria.catPrincipal === Categoria.catPrincipal);
+     }
 
 }
 
