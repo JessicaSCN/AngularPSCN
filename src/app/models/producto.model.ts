@@ -21,5 +21,4 @@ export class ProductoModel {
                 this.marca = new MarcaModel();
                 this.categoria = new CategoriaModel();
         }
-    
 }

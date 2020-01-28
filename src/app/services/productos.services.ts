@@ -18,7 +18,7 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '0', nombre: 'Microsoft', img: 'assets/img/marcas/microsoft.jpg' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Hogar', subCategorias: 'Hogar', filtros: 'Nuevo'},
+      categoria: {nombre: 'Impresoras' , id: '1', catPrincipal: 'Impresoras', subCategorias: 'Con tinta', filtros: 'Nuevo'},
       mailing: false,
       oferta: false
 
@@ -33,7 +33,7 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '1'  , nombre: 'Sony', img: 'assets/img/marcas/sony.png' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Hogar', subCategorias: 'Hogar', filtros: 'Nuevo'},
+      categoria: {nombre: 'Computadoras' , id: '1', catPrincipal: 'Hogar', subCategorias: 'Hogar', filtros: 'Nuevo'},
       mailing: true,
       oferta: false
     },
@@ -117,7 +117,7 @@ export class ProductosService {
 
      // Categorias
 
-     getPrByCat(Event, Categoria: CategoriaModel) {
+     getPrByCat(event: Event, Categoria: CategoriaModel) {
       return this.productos.filter(x => x.categoria.catPrincipal === Categoria.catPrincipal);
      }
 

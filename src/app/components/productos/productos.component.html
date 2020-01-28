@@ -7,15 +7,28 @@
 
 <!-- Categorias generales -->
 
-<!--  -->
+<!-- <ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias | cat:categorias.categoria" (click)="gotoDetail(categorias)">
+  <button type="button" class="btn btn-light" *ngFor="let categoria of categorias "  >{{categoria.catPrincipal}}</button>
+  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" (change)="selectedCategory = $event.target.value">
+    <a class="dropdown-item " *ngFor="let categoria of categorias " href="#">{{categoria.subCategorias}}</a> 
+    <a class="dropdown-item" href="#">B</a>
+    <a class="dropdown-item" href="#">C</a>
+    <li class="dropdown-divider"></li>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </ul>
+</ul> -->
 
-<ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;">
-  <button type="button" class="btn btn-light"  >Impresoras</button>
+<!--  -->
+<ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias" >
+  <button type="button" class="btn btn-light" *ngIf="categoria.catPrincipal == categoria.catPrincipal" (click)="getPrByCat($event, categoria.catPrincipal)">{{categoria.catPrincipal}}</button>
   <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
-    <a class="dropdown-item" href="#">A</a>  <!-- {{categoria.subCategorias}} -->
+    <a class="dropdown-item " href="#">A</a>  <!-- {{categoria.subCategorias}} -->
     <a class="dropdown-item" href="#">B</a>
     <a class="dropdown-item" href="#">C</a>
     <li class="dropdown-divider"></li>
@@ -25,7 +38,7 @@
 
 
 <ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;">
-  <button type="button" class="btn btn-light">Computadoras</button>
+  <button type="button" class="btn btn-light" (click)="click()">Computadoras</button>
   <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
   </button>

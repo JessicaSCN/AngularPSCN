@@ -42,6 +42,7 @@ import { OfertaComponent } from './components/oferta/oferta.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { FiltrosComponent } from './components/filtros/filtros.component';
 import { AltaCategoriaComponent } from './components/admin/alta-categoria/alta-categoria.component';
+import { CatPipe } from './Pipes/cat.pipe';
 
 
 
@@ -65,7 +66,8 @@ import { AltaCategoriaComponent } from './components/admin/alta-categoria/alta-c
     OfertaComponent,
     ServiciosComponent,
     FiltrosComponent,
-    AltaCategoriaComponent
+    AltaCategoriaComponent,
+    CatPipe
   ],
   imports: [
     BrowserModule,

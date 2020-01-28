@@ -9,8 +9,8 @@ export class CategoriaService {
       id: '0',
       nombre: 'Impresoras',
       catPrincipal: 'Impresoras',
-      subCategorias: 'Impresoras',
-      filtros: 'Impresoras'
+      subCategorias: 'Con tinta',
+      filtros: 'Nuevo'
 
     },
     {
