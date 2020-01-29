@@ -14,17 +14,13 @@ export class ProductosComponent implements OnInit {
 
   productos: ProductoModel[] = [];
   categorias: CategoriaModel[] = [];
+  subCategorias: string[] = [];
 
 
-  
-  
-  constructor(private productosService: ProductosService) {
+  constructor(private productosService: ProductosService, private categoriaService: CategoriaService) {
 
   }
 
-  click() {
-    console.log('Funciona');
-  }
 
   getPrByCat(event: Event, Categoria: CategoriaModel) {
     return this.productos.filter(x => x.categoria.catPrincipal === Categoria.catPrincipal);
@@ -33,6 +29,8 @@ export class ProductosComponent implements OnInit {
   ngOnInit() {
 
     this.productos = this.productosService.getProductos();
+    this.categorias = this.categoriaService.getCategorias();
+    this.subCategorias = this.categoriaService.getSubCategorias();
 
   }
 

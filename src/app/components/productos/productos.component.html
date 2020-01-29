@@ -22,13 +22,13 @@
 </ul> -->
 
 <!--  -->
-<ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias" >
+<!-- <ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias" >
   <button type="button" class="btn btn-light" *ngIf="categoria.catPrincipal == categoria.catPrincipal" (click)="getPrByCat($event, categoria.catPrincipal)">{{categoria.catPrincipal}}</button>
   <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
-    <a class="dropdown-item " href="#">A</a>  <!-- {{categoria.subCategorias}} -->
+    <a class="dropdown-item " href="#">A</a>  
     <a class="dropdown-item" href="#">B</a>
     <a class="dropdown-item" href="#">C</a>
     <li class="dropdown-divider"></li>
@@ -79,20 +79,24 @@
     <a class="dropdown-item" href="#">Separated link</a>
   </ul>
 </ul>
+-->
 
-<ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;">
-  <button type="button" class="btn btn-light">Proyectores</button>
-  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias ">
+  <button type="button" class="btn btn-light" ion-button (click)="getPrByCat(categoria.catPrincipal)">{{categoria.catPrincipal}}</button>
+  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" ion-button (click)="getSubCategorias()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
   </button>
-  <ul class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+  <ul class="dropdown-menu" *ngFor="let categoria of categorias">
+    <a class="dropdown-item" href="#">{{categoria.subCategorias}}</a>
     <li class="dropdown-divider"></li>
     <a class="dropdown-item" href="#">Separated link</a>
   </ul>
-</ul>
+</ul> 
+
+<!-- <div *ngFor="let categoria of categorias">
+  <button ion-button (click)="goTo()">{{categoria.catPrincipal}}</button>
+</div> -->
+
                       <!--  -->
 
                       <!-- Cards with the images  -->

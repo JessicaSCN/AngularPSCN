@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CategoriaModel } from '../models/categoria.model';
+import { exists } from 'fs';
 
 @Injectable()
 export class CategoriaService {
@@ -9,65 +10,65 @@ export class CategoriaService {
       id: '0',
       nombre: 'Impresoras',
       catPrincipal: 'Impresoras',
-      subCategorias: 'Con tinta',
+      subCategorias: ['Con tinta', 'Sin tinta' ],
       filtros: 'Nuevo'
 
     },
     {
       id: '1',
       nombre: 'Computadoras',
-      catPrincipal: 'Impresoras',
-      subCategorias: 'Impresoras',
+      catPrincipal: 'Computadoras',
+      subCategorias:  ['PC', 'Notebook'],
       filtros: 'Impresoras'
     },
     {
       id: '2',
       nombre: 'Celulares',
-      catPrincipal: 'Impresoras',
-      subCategorias: 'Impresoras',
+      catPrincipal: 'Celulares',
+      subCategorias: ['Xiaomi', 'Nokia'],
       filtros: 'Impresoras'
     },
     {
       id: '3',
       nombre: 'Componentes',
-      catPrincipal: 'Impresoras',
-      subCategorias: 'Impresoras',
+      catPrincipal: 'Componentes',
+      subCategorias: ['Modem'],
       filtros: 'Impresoras'
     },
     {
       id: '4',
       nombre: 'Proyectores',
-      catPrincipal: 'Impresoras',
-      subCategorias: 'Impresoras',
+      catPrincipal: 'Proyectores',
+      subCategorias: ['De pie' ],
       filtros: 'Impresoras'
     },
     {
       id: '5',
       nombre: 'Accesorios',
-      catPrincipal: 'Impresoras',
-      subCategorias: 'Impresoras',
+      catPrincipal: 'Accesorios',
+      subCategorias: ['Auriculares', 'Mouse'],
       filtros: 'Impresoras'
     },
     {
       id: '6',
       nombre: 'Monitores',
-      catPrincipal: 'Impresoras',
-      subCategorias: 'Impresoras',
+      catPrincipal: 'Monitores',
+      subCategorias: ['Grandes' ],
       filtros: 'Impresoras'
 
     },
     {
       id: '7',
       nombre: 'Seguridad',
-      catPrincipal: 'Impresoras',
-      subCategorias: 'Impresoras',
+      catPrincipal: 'Seguridad',
+      subCategorias:  ['Camaras', 'Caja fuerte'],
       filtros: 'Impresoras'
     },
     {
       id: '8',
       nombre: 'Games',
-      catPrincipal: 'Impresoras',
-      subCategorias: 'Impresoras',
+      catPrincipal: 'Games',
+      subCategorias: ['Teclado gamer', 'Silla gamer' ],
       filtros: 'Impresoras'
     }
 
@@ -81,6 +82,13 @@ export class CategoriaService {
 
   getCategorias() {
     return this.categorias;
+  }
+
+  getSubCategorias() {
+    // tslint:disable-next-line: prefer-const
+    let cat = new CategoriaModel();
+
+    return cat.subCategorias;
   }
 
   getCategoriaById(id: string): CategoriaModel {

@@ -5,10 +5,11 @@ export class CategoriaModel {
     id: string;
     nombre: string;
     catPrincipal: string;
-    subCategorias: string;
+    // tslint:disable-next-line: ban-types
+    subCategorias: string[];
     filtros: string;
 
     constructor() {
-       
+
     }
 }
