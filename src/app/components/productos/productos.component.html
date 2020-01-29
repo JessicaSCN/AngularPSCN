@@ -82,7 +82,7 @@
 -->
 
 <ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias ">
-  <button type="button" class="btn btn-light" ion-button (click)="getPrByCat(categoria.catPrincipal)">{{categoria.catPrincipal}}</button>
+  <button type="button" class="btn btn-light" [routerLink]="['/producto', categoria.catPrincipal]" ion-button (click)="getPrByCat(categoria.catPrincipal)">{{categoria.catPrincipal}}</button>
   <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" ion-button (click)="getSubCategorias()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
   </button>

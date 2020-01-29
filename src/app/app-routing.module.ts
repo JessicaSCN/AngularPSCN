@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'productos', component: ProductosComponent },
    { path: 'producto/:id', component: ProductoViewComponent },
+   { path: 'producto/categoria', component: ProductosComponent },
    { path: 'login', component: LoginComponent },
    { path: 'admin/listado-productos', component: ListadoProductosComponent },
    { path: 'admin/producto/nuevo', component: CrearProductoComponent },
