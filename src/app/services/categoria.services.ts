@@ -84,13 +84,6 @@ export class CategoriaService {
     return this.categorias;
   }
 
-  getSubCategorias() {
-    // tslint:disable-next-line: prefer-const
-    let cat = new CategoriaModel();
-
-    return cat.subCategorias;
-  }
-
   getCategoriaById(id: string): CategoriaModel {
     return this.categorias.filter(x => x.id.toString() === id)[0];
   }

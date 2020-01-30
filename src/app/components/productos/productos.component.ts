@@ -5,6 +5,7 @@ import { CategoriaComponent } from '../categoria/categoria.component';
 import { CategoriaModel } from '../../models/categoria.model';
 import { CategoriaService } from 'src/app/services/categoria.services';
 import { Observable } from 'rxjs';
+import { SubcategoriaService } from '../../services/subcategoria.service';
 
 @Component({
   selector: 'app-productos',
@@ -14,10 +15,8 @@ export class ProductosComponent implements OnInit {
 
   productos: ProductoModel[] = [];
   categorias: CategoriaModel[] = [];
-  subCategorias: string[] = [];
 
-
-  constructor(private productosService: ProductosService, private categoriaService: CategoriaService) {
+  constructor(private productosService: ProductosService, private categoriaService: CategoriaService, private subcategoriaService: SubcategoriaService) {
 
   }
 
@@ -30,8 +29,6 @@ export class ProductosComponent implements OnInit {
 
     this.productos = this.productosService.getProductos();
     this.categorias = this.categoriaService.getCategorias();
-    this.subCategorias = this.categoriaService.getSubCategorias();
-
   }
 
 

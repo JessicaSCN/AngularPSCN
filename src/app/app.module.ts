@@ -43,6 +43,8 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { FiltrosComponent } from './components/filtros/filtros.component';
 import { AltaCategoriaComponent } from './components/admin/alta-categoria/alta-categoria.component';
 import { CatPipe } from './Pipes/cat.pipe';
+import { SubcategoriaService } from './services/subcategoria.service';
+import { FiltroService } from './services/filtro.service';
 
 
 
@@ -81,7 +83,7 @@ import { CatPipe } from './Pipes/cat.pipe';
     AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
   providers: [
-    ProductosService, CategoriaService, MarcasService
+    ProductosService, CategoriaService, MarcasService, SubcategoriaService, FiltroService
   ],
   bootstrap: [AppComponent]
 })
