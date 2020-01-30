@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CategoriaModel } from '../models/categoria.model';
-import { exists } from 'fs';
+// import { exists } from 'fs';
 
 @Injectable()
 export class CategoriaService {

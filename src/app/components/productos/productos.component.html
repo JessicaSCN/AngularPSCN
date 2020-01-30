@@ -86,8 +86,8 @@
   <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" ion-button (click)="getSubCategorias()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
   </button>
-  <ul class="dropdown-menu" *ngFor="let categoria of categorias">
-    <a class="dropdown-item" href="#">{{categoria.subCategorias}}</a>
+  <ul class="dropdown-menu" >
+    <a class="dropdown-item"  href="#">{{categoria.subCategorias}}</a>
     <li class="dropdown-divider"></li>
     <a class="dropdown-item" href="#">Separated link</a>
   </ul>
