@@ -1,3 +1,5 @@
+<br>
+<br>
 <div class="container-fluid">
   <div class="row no-gutter">
     <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
@@ -18,7 +20,7 @@
                     type="text"
                     class="form-control"
                     name="username"
-                    placeholder="Username"
+                    placeholder="Usuario"
                     [(ngModel)]="usuario.username"
                     autofocus
                     required
@@ -34,7 +36,7 @@
                     type="email"
                     name="email"
                     class="form-control"
-                    placeholder="Email address"
+                    placeholder="Correo electrónico"
                     [(ngModel)]="usuario.email"
                     required
                     email
@@ -51,7 +53,7 @@
                     type="password"
                     name="password"
                     class="form-control"
-                    placeholder="Password"
+                    placeholder="Contraseña"
                     [(ngModel)]="usuario.password"
                     required
                     minlength="6"
@@ -67,7 +69,7 @@
                   <input
                     class="form-control tel"
                     name="celular"
-                    placeholder="Numero de celular"
+                    placeholder="Celular"
                     [(ngModel)]="usuario.celular"
                     required
                   />
@@ -83,25 +85,25 @@
                   class="btn btn-lg btn-primary btn-block text-uppercase"
                   type="submit"
                 >
-                  Register
+                  Registrar
                 </button>
                 <a
                   class="d-block text-center mt-2 small"
                   [routerLink]="['/login']"
-                  >o Inicia Sesion</a
+                  >o Inicia Sesión</a
                 >
                 <hr class="my-4" />
                 <button
                   class="btn btn-lg btn-google btn-block text-uppercase"
                   type="submit"
                 >
-                  <i class="fab fa-google mr-2"></i> Sign up with Google
+                  <i class="fab fa-google mr-2"></i> Ingresa con Google
                 </button>
                 <button
                   class="btn btn-lg btn-facebook btn-block text-uppercase"
                   type="submit"
                 >
-                  <i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook
+                  <i class="fab fa-facebook-f mr-2"></i> Ingresa con Facebook
                 </button>
               </form>
             </div>

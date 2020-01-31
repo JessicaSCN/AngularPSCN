@@ -117,7 +117,7 @@ export class ProductosService {
 
      // Categorias
 
-     getPrByCat(event: Event, Categoria: CategoriaModel) {
+     getPrByCat(Categoria: CategoriaModel) {
       return this.productos.filter(x => x.categoria.catPrincipal === Categoria.catPrincipal);
      }
 

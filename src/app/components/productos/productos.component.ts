@@ -21,7 +21,8 @@ export class ProductosComponent implements OnInit {
   }
 
 
-  getPrByCat(event: Event, Categoria: CategoriaModel) {
+  getPrByCat(Categoria: CategoriaModel) {
+    console.log('ENTRA');
     return this.productos.filter(x => x.categoria.catPrincipal === Categoria.catPrincipal);
    }
 

@@ -14,6 +14,7 @@ import { MailingComponent } from './components/mailing/mailing.component';
 import { OfertaComponent } from './components/oferta/oferta.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { AltaCategoriaComponent } from './components/admin/alta-categoria/alta-categoria.component';
+import { FiltrosComponent } from './components/filtros/filtros.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,9 @@ const routes: Routes = [
   { path: 'productos', component: ProductosComponent },
    { path: 'producto/:id', component: ProductoViewComponent },
    { path: 'producto/categoria', component: ProductosComponent },
+   { path: 'producto/filtro', component: FiltrosComponent },
    { path: 'login', component: LoginComponent },
+   { path: 'register', component: RegisterComponent },
    { path: 'admin/listado-productos', component: ListadoProductosComponent },
    { path: 'admin/producto/nuevo', component: CrearProductoComponent },
    { path: 'admin/listado-categorias', component: AltaListadoCategoriaComponent },

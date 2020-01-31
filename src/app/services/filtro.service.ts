@@ -26,8 +26,9 @@ export class FiltroService {
 
   constructor() { }
 
-  getFiltros() {
-    return this.filtro;
+  getFiltrosBySubC(SubC) {
+
+    return this.filtro.filter(x => x.subCategorias === SubC);
   }
 
   getFiltroById(id: string): FiltroModel {

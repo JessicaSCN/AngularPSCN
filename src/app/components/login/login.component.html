@@ -7,7 +7,7 @@
           <div class="row">
             <div class="col-md-9 col-lg-8 mx-auto">
               <h1>Bienvenido!</h1>
-              <h3 class="login-heading mb-4">Iniciar sesion</h3>
+              <h3 class="login-heading mb-4">Iniciar sesión</h3>
 
               <form
                 (ngSubmit)="login(registroForm)"
@@ -19,7 +19,7 @@
                     type="email"
                     name="email"
                     class="form-control"
-                    placeholder="Email address"
+                    placeholder="Correo electrónico"
                     [(ngModel)]="usuario.email"
                     required
                     email
@@ -40,7 +40,7 @@
                     type="password"
                     name="password"
                     class="form-control"
-                    placeholder="Password"
+                    placeholder="Contraseña"
                     [(ngModel)]="usuario.password"
                     required
                     minlength="6"
@@ -60,9 +60,9 @@
                     [(ngModel)]="recordarme"
                     type="checkbox"
                     name="remember-me"
-                    class="custom-checkbox"
+                    class="custom-checkbox " 
                     id="checkBoxRecordar"
-                  />
+                    />
                   <label for="checkBoxRecordar">&nbsp; Recordar usuario</label>
                 
                 </div>
@@ -73,7 +73,7 @@
                   class="btn btn-lg btn-primary btn-block text-uppercase"
                   type="submit"
                 >
-                  Iniciar Sesion
+                  Iniciar Sesión
                 </button>
                 <a
                   class="d-block text-center mt-2 small"
