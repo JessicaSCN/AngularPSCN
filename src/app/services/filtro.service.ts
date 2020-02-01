@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FiltroModel } from '../models/filtro.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class FiltroService {
 
   private filtro: FiltroModel[] = [

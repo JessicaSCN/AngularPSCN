@@ -1,8 +1,12 @@
-<p>Workkkkkkkkkkkkkkk</p>
+
 <!-- Default inline 1-->
 <div class="custom-control custom-checkbox custom-control-inline" *ngFor="let filtro of filtros" >
     <input type="checkbox" class="custom-control-input" id="defaultInline1">
     <label class="custom-control-label" for="defaultInline1">{{filtro.nombre}}</label> 
+
+    <p><input type="text" [(ngModel)]="filtros">
+      <button (click)="onPropagar()">Propagar</button>
+    </p>
   </div>
   
  

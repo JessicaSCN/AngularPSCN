@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FiltroModel } from 'src/app/models/filtro.model';
 import { ProductosService } from 'src/app/services/productos.services';
 import { FiltroService } from '../../services/filtro.service';
@@ -12,6 +12,10 @@ import { CategoriaService } from 'src/app/services/categoria.services';
 })
 export class FiltrosComponent implements OnInit {
 
+  @Output()
+  propagar = new EventEmitter<FiltroModel[]>();
+
+
   filtros: FiltroModel[] = [];
 
   constructor(private productosService: ProductosService, private categoriaService: CategoriaService, private subcategoriaService: SubcategoriaService, private filtroService: FiltroService) { }
@@ -20,7 +24,10 @@ export class FiltrosComponent implements OnInit {
 
     this.filtros = this.filtroService.getFiltrosBySubC('Computadoras');
 
+  }
 
+  onPropagar() {
+    this.propagar.emit(this.filtros);
   }
 
 }
