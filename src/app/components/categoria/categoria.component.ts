@@ -6,6 +6,8 @@ import { ProductosService } from '../../services/productos.services';
 import { FiltroService } from 'src/app/services/filtro.service';
 import { SubcategoriaModel } from 'src/app/models/subcategoria.model';
 import { SubcategoriaService } from '../../services/subcategoria.service';
+import { Observable } from 'rxjs';
+import { ProductoModel } from 'src/app/models/producto.model';
 
 @Component({
   selector: 'app-categoria',
@@ -13,7 +15,9 @@ import { SubcategoriaService } from '../../services/subcategoria.service';
   styleUrls: ['./categoria.component.css']
 })
 export class CategoriaComponent implements OnInit {
-
+  //
+  producto$: Observable<ProductoModel[]>;
+  //
   categorias: CategoriaModel[] = [];
   subC: SubcategoriaModel[] = [];
 
@@ -24,6 +28,10 @@ export class CategoriaComponent implements OnInit {
   ngOnInit() {
     this.categorias = this.categoriaService.getCategorias();
     this.subC = this.subcategoriaService.getSubCategorias();
+
+    // Observable suscripcion
+    // this.clientes$ = this.clientesService.getClientes$();
+    // this.clientes$.subscribe(clientes => this.clientes = clientes);
   }
 
 }

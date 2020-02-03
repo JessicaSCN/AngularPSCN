@@ -29,6 +29,11 @@ export class FiltroService {
     return this.filtro.filter(x => x.subCategorias === SubC);
   }
 
+  getFiltros() {
+
+    return this.filtro;
+  }
+
   getFiltroById(id: string): FiltroModel {
     return this.filtro.filter(x => x.id.toString() === id)[0];
   }

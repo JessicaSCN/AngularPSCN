@@ -1,5 +1,5 @@
 <ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias ">
-    <button type="button" class="btn btn-light" ion-button (click)="productosService.getPrByCat(categoria.catPrincipal)" >{{categoria.catPrincipal}}</button>
+    <button type="button" class="btn btn-light" ion-button (click)="productosService.getPrByCat(categoria.catPrincipal)"  >{{categoria.catPrincipal}}</button>
     <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Toggle Dropdown</span>
     </button>
@@ -9,4 +9,5 @@
       <a class="dropdown-item" href="#">Separated link</a>
     </ul>
   </ul> 
+
 

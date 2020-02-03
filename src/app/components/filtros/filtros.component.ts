@@ -12,8 +12,8 @@ import { CategoriaService } from 'src/app/services/categoria.services';
 })
 export class FiltrosComponent implements OnInit {
 
-  @Output()
-  propagar = new EventEmitter<FiltroModel[]>();
+  // @Output()
+  // propagar = new EventEmitter<FiltroModel[]>();
 
 
   filtros: FiltroModel[] = [];
@@ -22,12 +22,12 @@ export class FiltrosComponent implements OnInit {
 
   ngOnInit() {
 
-    this.filtros = this.filtroService.getFiltrosBySubC('Computadoras');
-
+    // this.filtros = this.filtroService.getFiltrosBySubC('Computadoras');
+    this.filtros = this.filtroService.getFiltros();
   }
 
-  onPropagar() {
-    this.propagar.emit(this.filtros);
-  }
+  // onPropagar() {
+  //   this.propagar.emit(this.filtros);
+  // }
 
 }

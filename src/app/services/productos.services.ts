@@ -4,9 +4,14 @@ import { ProductoModel } from '../models/producto.model';
 import { ProductosComponent } from '../components/productos/productos.component';
 import { MailingComponent } from '../components/mailing/mailing.component';
 import { CategoriaModel } from '../models/categoria.model';
+import { Observable } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class ProductosService {
+
+  private producto$ = new Subject<ProductoModel[]>();
+
   public productos: ProductoModel[] = [
     {
       id: '0',
@@ -82,6 +87,7 @@ export class ProductosService {
     }
   ];
 
+
   public url = '';
 
   constructor(private http: HttpClient) {
@@ -95,6 +101,15 @@ export class ProductosService {
     // this.http.post()
 
   }
+
+  // agregarCliente(productos: ProductoModel[]) {
+  //   this.productos.push(productos);
+  //   this.producto$.next(this.productos);
+  // }
+
+  // getClientes$(): Observable<Cliente[]> {
+  //   return this.clientes$.asObservable();
+  // }
 
   getProductos() {
     return this.productos;
