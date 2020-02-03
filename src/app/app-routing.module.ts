@@ -16,15 +16,15 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { AltaCategoriaComponent } from './components/admin/alta-categoria/alta-categoria.component';
 import { FiltrosComponent } from './components/filtros/filtros.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
-
+import { ProByCatViewComponent } from './components/pro-by-cat-view/pro-by-cat-view.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent }, // canActivate: [AuthGuard]
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'productos', component: ProductosComponent },
    { path: 'producto/:id', component: ProductoViewComponent },
-   { path: 'producto/categoria', component: CategoriaComponent },
-   { path: 'producto/filtro', component: FiltrosComponent },
+   { path: 'productos/:categoria', component: ProByCatViewComponent },
+   { path: 'productos/:filtro', component: FiltrosComponent },
    { path: 'login', component: LoginComponent },
    { path: 'register', component: RegisterComponent },
    { path: 'admin/listado-productos', component: ListadoProductosComponent },

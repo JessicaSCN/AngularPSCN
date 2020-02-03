@@ -45,6 +45,7 @@ import { AltaCategoriaComponent } from './components/admin/alta-categoria/alta-c
 import { CatPipe } from './Pipes/cat.pipe';
 import { SubcategoriaService } from './services/subcategoria.service';
 import { FiltroService } from './services/filtro.service';
+import { ProByCatViewComponent } from './components/pro-by-cat-view/pro-by-cat-view.component';
 
 
 
@@ -69,7 +70,8 @@ import { FiltroService } from './services/filtro.service';
     ServiciosComponent,
     FiltrosComponent,
     AltaCategoriaComponent,
-    CatPipe
+    CatPipe,
+    ProByCatViewComponent
   ],
   imports: [
     BrowserModule,

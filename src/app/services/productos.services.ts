@@ -12,6 +12,8 @@ export class ProductosService {
 
   private producto$ = new Subject<ProductoModel[]>();
 
+  producto: any[] = [];
+
   public productos: ProductoModel[] = [
     {
       id: '0',
@@ -23,7 +25,7 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '0', nombre: 'Microsoft', img: 'assets/img/marcas/microsoft.jpg' }
       , activo: true,
-      categoria: {nombre: 'Impresoras' , id: '1', catPrincipal: 'Impresoras', subCategorias: ['Con tinta' ], filtros: 'Nuevo'},
+      categoria: {nombre: 'Consolas' , id: '1', catPrincipal: 'Games', subCategorias: ['Con tinta' ], filtros: 'Nuevo'},
       mailing: false,
       oferta: false
 
@@ -132,8 +134,17 @@ export class ProductosService {
 
      // Categorias
 
-     getPrByCat(Categoria: CategoriaModel) {
-      return this.productos.filter(x => x.categoria.catPrincipal === Categoria.catPrincipal);
+     getPrByCat(Categoria: string) {
+
+      // console.log('Categoria click',Categoria);
+     
+
+      this.producto = this.productos.filter(x => x.categoria.catPrincipal === Categoria );
+
+      // console.log('Producto return', this.producto);
+
+      return this.producto;
+
      }
 
 }

@@ -12,11 +12,13 @@
 <!-- ion-button (click)="getSubCategorias()"
 [routerLink]="['/producto', categoria.catPrincipal]" -->
 
-<app-categoria>
-  
+
+
+        <app-categoria></app-categoria>
+        <app-filtros ></app-filtros>
+
   
 
-</app-categoria>
 
 <!-- <ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias ">
   <button type="button" class="btn btn-light" ion-button (click)="productosService.getPrByCat(categoria.catPrincipal)" >{{categoria.catPrincipal}}</button>
@@ -30,11 +32,6 @@
   </ul>
 </ul>  -->
 
-<app-filtros >
-  
-  <!-- (propagar)="procesaPropagar($event)" -->
-
-</app-filtros>
 
 <!-- <div *ngFor="let categoria of categorias">
   <button ion-button (click)="goTo()">{{categoria.catPrincipal}}</button>
@@ -44,7 +41,7 @@
 
                       <!-- Cards with the images  -->
                       <!-- col-md-10 col-md-offset--20  -->
-  <div class="card-columns animated fadeIn fast col-md-12">
+  <!-- <div class="card-columns animated fadeIn fast col-md-12">
     <div class="card " *ngFor="let producto of productos; let i = index" >
       <img [src]="producto.img" class="card-img-top" alt="..." />
       <div class="card-body">
@@ -56,7 +53,7 @@
         <button type="button" [routerLink]="['/producto', producto.id]" class="btn btn-block btn-outline-primary">Ver más...</button>
       </div>
     </div>
-   </div>
+   </div> -->
 
      
   </div>

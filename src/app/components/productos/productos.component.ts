@@ -15,7 +15,7 @@ import { FiltroService } from 'src/app/services/filtro.service';
 })
 export class ProductosComponent implements OnInit {
 
-  categorias: CategoriaModel[] = [];
+categorias: CategoriaModel[] = [];
   productos: ProductoModel[] = [];
   // proCat: ProductoModel[] = this.getPrByCat(this.categorias);
 
