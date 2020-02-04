@@ -37,10 +37,15 @@
                         <!--  -->
                         <!-- Cards with the images  -->
                         <!-- col-md-10 col-md-offset--20  -->
+                
+
     <div class="card-columns animated fadeIn fast col-md-12">
+     
       <div class="card " *ngFor="let producto of categoria; let i = index" >
+        
         <img [src]="producto.img" class="card-img-top" alt="..." />
         <div class="card-body">
+          
           <h5 class="card-title">{{producto.nombre}}</h5>
           <h5 class="card-subtitle">{{producto.precio}}</h5>
           <p class="card-text">

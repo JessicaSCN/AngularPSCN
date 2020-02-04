@@ -1,20 +1,35 @@
 
-  <ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias ">
-      <button type="button" class="btn btn-light" (click)="buscarProducto(categoria.catPrincipal)"  >{{categoria.catPrincipal}}</button>
-      <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <!-- <ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias ">
+      <button type="button" data-toggle="dropdown" class="btn btn-light dropdown-toggle multi-level-dropdown" aria-haspopup="true"
+      aria-expanded="false" (click)="buscarProducto(categoria.catPrincipal)"  >{{categoria.catPrincipal}}</button> -->
+      <!-- <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split "  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <ul class="dropdown-menu" >
-        <a class="dropdown-item"  (click)="filtroService.getFiltrosBySubC(categoria.subCategorias)" href="#">{{categoria.subCategorias}}</a>
-        <li class="dropdown-divider"></li>
-        <a class="dropdown-item" href="#">Separated link</a>
+      </button> -->
+      <!-- <ul style="list-style-type:none" class="dropdown-menu mt-2 rounded-0 white border-0 z-depth-1" > 
+      
+       <a class="dropdown-item w-100"  (click)="filtroService.getFiltrosBySubC(categoria.subCategorias)" href="#">{{categoria.subCategorias}}</a> 
+         <li class="dropdown-divider"></li>
+        <a class="dropdown-item" href="#">Separated link</a> 
       </ul>
+      
   </ul> 
+   -->
 
+    <div class="dropdown row col-md-1" *ngFor="let categoria of categorias "><br>
+      <button class="dropbtn rounded dropright" (click)="buscarProducto(categoria.catPrincipal)"  >{{categoria.catPrincipal}}</button> 
+     
+    
+   
+      <div class="dropdown-content" > 
+        
+          <a (click)="filtroService.getFiltrosBySubC(categoria.subCategorias)" *ngFor="let SC of subCategorias" href="#">{{SC.nombre}}</a> 
+       
+      </div>
+      
+    </div> 
+
+    <br>
 
 
 
   <app-pro-by-cat-view [categoria]="categoriaDatos"></app-pro-by-cat-view>
-
-
-

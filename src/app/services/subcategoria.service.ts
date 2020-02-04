@@ -18,6 +18,20 @@ export class SubcategoriaService {
       filtros: 'REF'
     },
 
+    {
+      id: '2',
+      nombre: 'Con tinta',
+      catPrincipal: 'Impresoras',
+      filtros: 'Samsung'
+
+    },
+    {
+      id: '3',
+      nombre: 'Sin tinta',
+      catPrincipal: 'Impresoras',
+      filtros: 'Brother'
+    },
+
 
   ];
 

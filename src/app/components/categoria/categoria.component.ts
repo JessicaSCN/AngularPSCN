@@ -16,12 +16,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./categoria.component.css']
 })
 export class CategoriaComponent implements OnInit {
-  //
-  producto$: Observable<ProductoModel[]>;
-  //
+
+  // producto$: Observable<ProductoModel[]>;
   categorias: CategoriaModel[] = [];
   categoria: CategoriaModel = null;
-  subC: SubcategoriaModel[] = [];
+  subCategorias: SubcategoriaModel[] = [];
 
 
   categoriaDatos: any[] = [];
@@ -38,7 +37,7 @@ export class CategoriaComponent implements OnInit {
 
   ngOnInit() {
     this.categorias = this.categoriaService.getCategorias();
-    // this.subC = this.subcategoriaService.getSubCategorias();
+    this.subCategorias = this.subcategoriaService.getSubCategorias();
 
     // Observable suscripcion
     // this.clientes$ = this.clientesService.getClientes$();
