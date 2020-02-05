@@ -9,6 +9,8 @@ import { SubcategoriaService } from '../../services/subcategoria.service';
 import { Observable } from 'rxjs';
 import { ProductoModel } from 'src/app/models/producto.model';
 import { ActivatedRoute } from '@angular/router';
+import { FiltroModel } from '../../models/filtro.model';
+import { FiltrosComponent } from '../filtros/filtros.component';
 
 @Component({
   selector: 'app-categoria',
@@ -21,9 +23,12 @@ export class CategoriaComponent implements OnInit {
   categorias: CategoriaModel[] = [];
   categoria: CategoriaModel = null;
   subCategorias: SubcategoriaModel[] = [];
-
+  filtro: FiltroModel = null;
+  filtros: FiltroModel[] = [];
 
   categoriaDatos: any[] = [];
+  filtroDatos: any[] = [];
+  mostrarFiltros: boolean;
 
   constructor(private activatedRoute: ActivatedRoute, private categoriaService: CategoriaService, public productosService: ProductosService, public filtroService: FiltroService, public subcategoriaService: SubcategoriaService) {
 
@@ -31,6 +36,8 @@ export class CategoriaComponent implements OnInit {
     //   this.categoria = categoriaService.getCategoriaById(params.id); });
 
     this.categoriaDatos = this.productosService.getProductos();
+    this.mostrarFiltros = false;
+
 
 
   }
@@ -44,15 +51,24 @@ export class CategoriaComponent implements OnInit {
     // this.clientes$.subscribe(clientes => this.clientes = clientes);
   }
 
-
+// Categoria
   buscarProducto( categoria: string) {
 
     console.log(categoria);
-
     this.categoriaDatos = this.productosService.getPrByCat( categoria );
 
     return this.categoriaDatos;
 
+  }
+
+  // Filtros
+  getFiltrosBySubC(SubC: string) {
+
+    console.log(SubC);
+    this.mostrarFiltros = true;
+    this.filtroDatos = this.filtros.filter(x => x.subCategorias === SubC);
+
+    return this.filtroDatos;
   }
 
 }

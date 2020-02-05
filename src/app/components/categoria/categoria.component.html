@@ -14,15 +14,16 @@
       
   </ul> 
    -->
+                            <!-- Categorias que se muestran  -->
 
-    <div class="dropdown row col-md-1" *ngFor="let categoria of categorias "><br>
+    <div class="dropdown  row col-md-1" *ngFor="let categoria of categorias "><br>
       <button class="dropbtn rounded dropright" (click)="buscarProducto(categoria.catPrincipal)"  >{{categoria.catPrincipal}}</button> 
-     
-    
-   
+
       <div class="dropdown-content" > 
         
-          <a (click)="filtroService.getFiltrosBySubC(categoria.subCategorias)" *ngFor="let SC of subCategorias" href="#">{{SC.nombre}}</a> 
+                        <!-- Llamado de filtros por subcategoria -->
+
+          <a (click)="getFiltrosBySubC(SC.nombre)"  *ngFor="let SC of subCategorias" href="#">{{SC.nombre}}</a> 
        
       </div>
       
@@ -31,5 +32,7 @@
     <br>
 
 
+                  <!-- Muestra el componente de productos por categoria -->
 
+  <app-filtros [filtro]="filtroDatos" > </app-filtros>
   <app-pro-by-cat-view [categoria]="categoriaDatos"></app-pro-by-cat-view>

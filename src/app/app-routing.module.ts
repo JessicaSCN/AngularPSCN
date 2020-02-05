@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'productos', component: ProductosComponent },
    { path: 'producto/:id', component: ProductoViewComponent },
    { path: 'productos/:categoria', component: ProByCatViewComponent },
-   { path: 'productos/:filtro', component: FiltrosComponent },
+   { path: 'productos/:filtro', component: ProByCatViewComponent },
    { path: 'login', component: LoginComponent },
    { path: 'register', component: RegisterComponent },
    { path: 'admin/listado-productos', component: ListadoProductosComponent },
