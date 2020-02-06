@@ -20,14 +20,14 @@ export class FiltrosComponent implements OnInit {
 // Pasar la variable a true.
 // En html filtros escribir un ngif que permita mostrar los respectivos filtros.
 
-  filtros: FiltroModel[] = [];
-  mostrarFiltros: boolean;
+  // filtros: FiltroModel[] = [];
+  // mostrarFiltros: boolean;
 
   @Input() filtro: FiltroModel[] = [];
 
   constructor(private productosService: ProductosService, private categoriaService: CategoriaService, private subcategoriaService: SubcategoriaService, private filtroService: FiltroService) {
 
-    this.mostrarFiltros = false;
+    // this.mostrarFiltros = false;
 
   }
 

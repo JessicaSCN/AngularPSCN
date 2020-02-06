@@ -23,9 +23,10 @@
         
                         <!-- Llamado de filtros por subcategoria -->
 
-          <a (click)="getFiltrosBySubC(SC.nombre)"  *ngFor="let SC of subCategorias" href="#">{{SC.nombre}}</a> 
+          <button (click)="buscarFiltroBySubC(SC.nombre)"  *ngFor="let SC of subCategorias" href="productos">{{SC.nombre}}</button> 
        
       </div>
+ 
       
     </div> 
 

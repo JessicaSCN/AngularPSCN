@@ -45,6 +45,7 @@ export class CategoriaComponent implements OnInit {
   ngOnInit() {
     this.categorias = this.categoriaService.getCategorias();
     this.subCategorias = this.subcategoriaService.getSubCategorias();
+    this.mostrarFiltros = false;
 
     // Observable suscripcion
     // this.clientes$ = this.clientesService.getClientes$();
@@ -62,12 +63,24 @@ export class CategoriaComponent implements OnInit {
   }
 
   // Filtros
-  getFiltrosBySubC(SubC: string) {
+  buscarFiltroBySubC(SubC: string) {
 
-    console.log(SubC);
-    this.mostrarFiltros = true;
-    this.filtroDatos = this.filtros.filter(x => x.subCategorias === SubC);
+    if (this.mostrarFiltros === false) {
 
+      console.log("Sub si es false" + SubC);
+
+      this.mostrarFiltros = true;
+
+      this.filtroDatos = this.filtroService.getFiltrosBySubC(SubC);
+
+    } else {
+      console.log("Sub si es true" + SubC);
+
+      this.filtroDatos = this.filtroService.getFiltrosBySubC(SubC);
+
+    }
+
+    console.log(this.filtroDatos);
     return this.filtroDatos;
   }
 

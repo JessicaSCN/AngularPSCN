@@ -19,6 +19,7 @@ export class ProByCatViewComponent implements OnInit {
 
   @Input() categoria: CategoriaModel[] = [];
 
+
   constructor(public activatedRoute: ActivatedRoute, public productosService: ProductosService, private categoriaService: CategoriaService, private subcategoriaService: SubcategoriaService, public filtroService: FiltroService) { 
     // this.activatedRoute.params.subscribe( params => {
     //   this.productos = productosService.getPrByCat(params.categorias.catPrincipal);

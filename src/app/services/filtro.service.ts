@@ -4,7 +4,9 @@ import { FiltroModel } from '../models/filtro.model';
 @Injectable()
 export class FiltroService {
 
-  private filtro: FiltroModel[] = [
+filtroAny: any[] = [];
+
+  public filtro: FiltroModel[] = [
     {
       id: '0',
       nombre: 'Nuevo',
@@ -34,4 +36,13 @@ export class FiltroService {
   getFiltroById(id: string): FiltroModel {
     return this.filtro.filter(x => x.id.toString() === id)[0];
   }
+
+   getFiltrosBySubC(SubC: string) { 
+
+    
+      this.filtroAny = this.filtro.filter(x => x.subCategorias === SubC );
+
+      return this.filtroAny;
+
+     }
 }

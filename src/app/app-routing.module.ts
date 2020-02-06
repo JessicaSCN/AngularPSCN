@@ -34,7 +34,7 @@ const routes: Routes = [
    { path: 'mailing', component: MailingComponent },
    { path: 'oferta', component: OfertaComponent },
    { path: 'servicios', component: ServiciosComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'home'}
+  // { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
 @NgModule({
