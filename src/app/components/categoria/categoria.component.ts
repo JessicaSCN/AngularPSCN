@@ -23,6 +23,7 @@ export class CategoriaComponent implements OnInit {
   categorias: CategoriaModel[] = [];
   categoria: CategoriaModel = null;
   subCategorias: SubcategoriaModel[] = [];
+
   filtro: FiltroModel = null;
   filtros: FiltroModel[] = [];
 
@@ -67,14 +68,14 @@ export class CategoriaComponent implements OnInit {
 
     if (this.mostrarFiltros === false) {
 
-      console.log("Sub si es false" + SubC);
+      console.log('Sub si es false' + SubC);
 
       this.mostrarFiltros = true;
 
       this.filtroDatos = this.filtroService.getFiltrosBySubC(SubC);
 
     } else {
-      console.log("Sub si es true" + SubC);
+      console.log('Sub si es true' + SubC);
 
       this.filtroDatos = this.filtroService.getFiltrosBySubC(SubC);
 

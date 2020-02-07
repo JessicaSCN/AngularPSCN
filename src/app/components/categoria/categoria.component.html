@@ -22,8 +22,8 @@
       <div class="dropdown-content" > 
         
                         <!-- Llamado de filtros por subcategoria -->
-
-          <button (click)="buscarFiltroBySubC(SC.nombre)"  *ngFor="let SC of subCategorias" href="productos">{{SC.nombre}}</button> 
+          <a (click)="buscarFiltroBySubC(SC.nombre)"  *ngFor="let SC of subCategorias">{{SC.nombre}}</a> 
+  
        
       </div>
  

@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { ProductosService } from './services/productos.services';
 
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 // Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -82,7 +84,8 @@ import { ProByCatViewComponent } from './components/pro-by-cat-view/pro-by-cat-v
     AngularFireAnalyticsModule, // dynamically imports firebase/analytics
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    SlickCarouselModule
   ],
   providers: [
     ProductosService, CategoriaService, MarcasService, SubcategoriaService, FiltroService
