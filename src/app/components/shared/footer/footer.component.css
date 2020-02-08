@@ -23,7 +23,7 @@ h5 {
 }
 
 a {
-  color: #818494;
+  color: #000000;
   font-weight: 500;
   text-decoration: none;
   background-color: transparent;
@@ -40,7 +40,7 @@ footer {
 
 /* Carousel con JQuery */
 
-.slick-slider {
+/* .slick-slider {
   width: 90%;
   margin: auto;
   background: #000;
@@ -59,22 +59,31 @@ footer {
   pointer-events: none;
   opacity: 0.2;
 }
- 
-.prev-slide {
-  /* background: url(assets/images/nav-icon.png) no-repeat scroll 0 0; */
+  */
+ /* .prev-slide { 
+   background: url(assets/images/nav-icon.png) no-repeat scroll 0 0; 
   left: -33px;
-}
- 
+}  */
+/*  
 .next-slide {
-  /* background: url(assets/images/nav-icon.png) no-repeat scroll -24px 0px; */
+   background: url(assets/images/nav-icon.png) no-repeat scroll -24px 0px; 
   right: -33px;
-}
- 
+} */
+/*  
 .prev-slide:hover {
   background-position: 0px -53px;
 }
  
 .next-slide:hover {
   background-position: -24px -53px;
-}
+} */
  
+.slick-slide { 
+  outline: none; 
+ }
+ #prev, #next {  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+ }
