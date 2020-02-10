@@ -16,24 +16,41 @@
    -->
                             <!-- Categorias que se muestran  -->
 
-    <div class="dropdown  row col-md-1" *ngFor="let categoria of categorias "><br>
-      <button class="dropbtn rounded dropright" (click)="buscarProducto(categoria.catPrincipal)"  >{{categoria.catPrincipal}}</button> 
-
-      <div class="dropdown-content" > 
-        
-                        <!-- Llamado de filtros por subcategoria -->
-          <a (click)="buscarFiltroBySubC(SC.nombre)"  *ngFor="let SC of subCategorias">{{SC.nombre}}</a> 
-  
+            
+                            
+  <div class="row">
+                              
+    <div class="col-2" >                              
        
-      </div>
- 
-      
-    </div> 
+      <!-- <div class="dropdown" *ngFor="let categoria of categorias ">
+            <button class="dropbtn dropright btn-block" (click)="buscarProducto(categoria.catPrincipal)"  >{{categoria.catPrincipal}}</button> 
+                                
+            <div class="dropdown-content" > 
+            <!-- Llamado de filtros por subcategoria -->
+              <!-- <a (click)="buscarFiltroBySubC(SC.nombre)"  *ngFor="let SC of subCategorias">{{SC.nombre}}</a>  -->
+            <!-- </div> -->
+        <!-- </div>  -->
 
-    <br>
+        <div class="btn-group-vertical dropright" *ngFor="let categoria of categorias">
+          <button type="button" class="btn btn-primary btn-block dropdown-toggle" (click)="buscarProducto(categoria.catPrincipal)"  data-toggle="dropdown" >
+            {{categoria.catPrincipal}}
+          </button>
+          <div class="dropdown-menu">
+            <!-- Dropdown menu links -->
+            <a class="dropdown-item" (click)="buscarFiltroBySubC(SC.nombre)" *ngFor="let SC of subCategorias">{{SC.nombre}}</a>
+          </div>
+        </div>
+
+  </div>
+
+  <div class="col-10">
+    <app-pro-by-cat-view [categoria]="categoriaDatos"></app-pro-by-cat-view>
+  </div>
+
+</div>
+
 
 
                   <!-- Muestra el componente de productos por categoria -->
 
-  <app-filtros [filtro]="filtroDatos" > </app-filtros>
-  <app-pro-by-cat-view [categoria]="categoriaDatos"></app-pro-by-cat-view>
+   <app-filtros [filtro]="filtroDatos" > </app-filtros> 

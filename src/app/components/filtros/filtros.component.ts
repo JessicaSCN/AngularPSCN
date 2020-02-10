@@ -24,10 +24,11 @@ export class FiltrosComponent implements OnInit {
   // mostrarFiltros: boolean;
 
   @Input() filtro: FiltroModel[] = [];
+  mostrarFiltros: boolean;
 
   constructor(private productosService: ProductosService, private categoriaService: CategoriaService, private subcategoriaService: SubcategoriaService, private filtroService: FiltroService) {
 
-    // this.mostrarFiltros = false;
+    this.mostrarFiltros = false;
 
   }
 
