@@ -30,6 +30,7 @@ export class CategoriaComponent implements OnInit {
   categoriaDatos: any[] = [];
   filtroDatos: any[] = [];
   mostrarFiltros: boolean;
+  flag: boolean;
 
   constructor(private activatedRoute: ActivatedRoute, private categoriaService: CategoriaService, public productosService: ProductosService, public filtroService: FiltroService, public subcategoriaService: SubcategoriaService) {
 
@@ -38,6 +39,7 @@ export class CategoriaComponent implements OnInit {
 
     this.categoriaDatos = this.productosService.getProductos();
     this.mostrarFiltros = false;
+    this.flag = true;
 
 
 
@@ -63,6 +65,14 @@ export class CategoriaComponent implements OnInit {
 
   }
 
+ // Ocultar categorias y mostrar filtros
+toggle() {
+
+return this.flag = false;
+
+}
+
+
   // Filtros
   buscarFiltroBySubC(SubC: string) {
 
@@ -84,5 +94,7 @@ export class CategoriaComponent implements OnInit {
     console.log(this.filtroDatos);
     return this.filtroDatos;
   }
+
+
 
 }

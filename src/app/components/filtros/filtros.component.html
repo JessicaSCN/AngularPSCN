@@ -2,13 +2,52 @@
 <!-- Default inline 1-->
                         <!-- Filtros que se muestran -->
               
-<div class="row" *ngIf="!mostrarFiltros">      
- 
-<div class="custom-control custom-checkbox custom-control-inline" *ngFor="let filtroD of filtro" >
-    <input type="checkbox" class="custom-control-input col-md-1" id="defaultInline1">
-    <label class="custom-control-label" for="defaultInline1">{{filtroD.nombre}}</label> 
-
-</div>
-</div>
+ <div> 
   
- 
+     <h2>Filtros</h2>    
+     <hr> 
+    <div id="Grupos">
+        <h5>Marcas</h5>
+        <hr>
+
+        <!-- (change)="$event.target.checked ? agregar(data) : quitar(data)" -->
+<!-- 
+        agregar(data: string) { // Agregamos el elemento
+            this.miDataInterior.push(data);
+          }
+        
+          quitar(data) { // Filtramos el elemento para que quede fuera
+            this.miDataInterior = this.miDataInterior.filter(s => s !== data);
+          } -->
+
+        <div class="custom-control custom-checkbox" *ngFor="let filtroD of filtro" >
+            <input type="checkbox" class="custom-control-input col-md-1" id="defaultInline1">
+                <label class="custom-control-label" for="defaultInline1">{{filtroD.nombre}}</label> 
+
+        </div>
+        <hr>
+
+        <h5>Color</h5>
+        <hr>
+        <div class="custom-control custom-checkbox" *ngFor="let filtroD of filtro" >
+            <input type="checkbox" class="custom-control-input col-md-1" id="defaultInline2">
+                <label class="custom-control-label" for="defaultInline2">{{filtroD.nombre}}</label> 
+
+        </div>
+        <hr>
+
+        <h5>Componentes</h5>
+        <hr>
+        <div class="custom-control custom-checkbox" *ngFor="let filtroD of filtro" >
+            <input type="checkbox" class="custom-control-input col-md-1" id="defaultInline3">
+                <label class="custom-control-label" for="defaultInline3">{{filtroD.nombre}}</label> 
+
+        </div>
+        <hr>
+
+
+    </div>
+</div> 
+
+
+<!------------------------------------------ Template de filtros  -------------------------------------------->

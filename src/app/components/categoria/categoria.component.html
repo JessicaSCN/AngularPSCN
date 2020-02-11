@@ -1,20 +1,5 @@
-
-  <!-- <ul class="btn-group col-md-4" style="position: relative; display: block; float:left; width:30.3%;" *ngFor="let categoria of categorias ">
-      <button type="button" data-toggle="dropdown" class="btn btn-light dropdown-toggle multi-level-dropdown" aria-haspopup="true"
-      aria-expanded="false" (click)="buscarProducto(categoria.catPrincipal)"  >{{categoria.catPrincipal}}</button> -->
-      <!-- <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split "  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button> -->
-      <!-- <ul style="list-style-type:none" class="dropdown-menu mt-2 rounded-0 white border-0 z-depth-1" > 
-      
-       <a class="dropdown-item w-100"  (click)="filtroService.getFiltrosBySubC(categoria.subCategorias)" href="#">{{categoria.subCategorias}}</a> 
-         <li class="dropdown-divider"></li>
-        <a class="dropdown-item" href="#">Separated link</a> 
-      </ul>
-      
-  </ul> 
-   -->
-                            <!-- Categorias que se muestran  -->
+ 
+                           <!-- Categorias que se muestran  -->
 
             
                             
@@ -26,23 +11,52 @@
             <button class="dropbtn dropright btn-block" (click)="buscarProducto(categoria.catPrincipal)"  >{{categoria.catPrincipal}}</button> 
                                 
             <div class="dropdown-content" > 
-            <!-- Llamado de filtros por subcategoria -->
+         Llamado de filtros por subcategoria -->
               <!-- <a (click)="buscarFiltroBySubC(SC.nombre)"  *ngFor="let SC of subCategorias">{{SC.nombre}}</a>  -->
             <!-- </div> -->
         <!-- </div>  -->
-
-        <div class="btn-group-vertical dropright" *ngFor="let categoria of categorias">
-          <button type="button" class="btn btn-primary btn-block dropdown-toggle" (click)="buscarProducto(categoria.catPrincipal)"  data-toggle="dropdown" >
+    <div *ngIf="flag">
+         <div class="btn-group-vertical dropright mx-auto d-block" *ngFor="let categoria of categorias">
+          <button id="btnCat" type="button" class="btn btn-light btn-block dropdown-toggle" (click)="buscarProducto(categoria.catPrincipal)"  data-toggle="dropdown" >
             {{categoria.catPrincipal}}
           </button>
           <div class="dropdown-menu">
-            <!-- Dropdown menu links -->
-            <a class="dropdown-item" (click)="buscarFiltroBySubC(SC.nombre)" *ngFor="let SC of subCategorias">{{SC.nombre}}</a>
+           
+            <a class="dropdown-item" (click)="buscarFiltroBySubC(SC.nombre)" (click)="toggle()" *ngFor="let SC of subCategorias">{{SC.nombre}}</a>
           </div>
+        </div> 
+      </div>
+        <!-- Prueba de boton cat -->
+        
+       <div class="dropdown" *ngIf="!flag" >
+        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categorías
+        </button>
+        <div class="dropdown-menu" >
+          
+          <button class="dropbtn dropright btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="buscarProducto(categoria.catPrincipal)" *ngFor="let categoria of categorias"  >{{categoria.catPrincipal}}</button> 
+          
+          <div class="dropdown-menu" > 
+            
+
+            <a class="dropdown-item" (click)="buscarFiltroBySubC(SC.nombre)"  *ngFor="let SC of subCategorias">{{SC.nombre}}</a>  
+        </div> 
+        
+      
+        
+        
         </div>
+      </div> 
+
+
+        
 
   </div>
 
+ <!-- Muestra el componente de productos por categoria -->
+<div>
+ <app-filtros [filtro]="filtroDatos" *ngIf="!flag" > </app-filtros>
+</div>
   <div class="col-10">
     <app-pro-by-cat-view [categoria]="categoriaDatos"></app-pro-by-cat-view>
   </div>
@@ -51,6 +65,4 @@
 
 
 
-                  <!-- Muestra el componente de productos por categoria -->
-
-   <app-filtros [filtro]="filtroDatos" > </app-filtros> 
+                  
