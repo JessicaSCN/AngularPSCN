@@ -11,7 +11,7 @@ export class CategoriaService {
       nombre: 'Impresoras',
       catPrincipal: 'Impresoras',
       subCategorias: ['Con tinta', 'Sin tinta' ],
-      filtros: 'Nuevo'
+      filtros: 'Brother'
 
     },
     {
@@ -19,42 +19,42 @@ export class CategoriaService {
       nombre: 'Computadoras',
       catPrincipal: 'Computadoras',
       subCategorias:  ['PC', 'Notebook'],
-      filtros: 'Impresoras'
+      filtros: 'REF'
     },
     {
       id: '2',
       nombre: 'Celulares',
       catPrincipal: 'Celulares',
       subCategorias: ['Xiaomi', 'Nokia'],
-      filtros: 'Impresoras'
+      filtros: 'Octa-Core'
     },
     {
       id: '3',
       nombre: 'Componentes',
       catPrincipal: 'Componentes',
       subCategorias: ['Modem'],
-      filtros: 'Impresoras'
+      filtros: 'Antenas'
     },
     {
       id: '4',
       nombre: 'Proyectores',
       catPrincipal: 'Proyectores',
       subCategorias: ['De pie' ],
-      filtros: 'Impresoras'
+      filtros: 'Acer'
     },
     {
       id: '5',
       nombre: 'Accesorios',
       catPrincipal: 'Accesorios',
       subCategorias: ['Auriculares', 'Mouse'],
-      filtros: 'Impresoras'
+      filtros: 'Azul'
     },
     {
       id: '6',
       nombre: 'Monitores',
       catPrincipal: 'Monitores',
       subCategorias: ['Grandes' ],
-      filtros: 'Impresoras'
+      filtros: 'LED'
 
     },
     {
@@ -62,14 +62,14 @@ export class CategoriaService {
       nombre: 'Seguridad',
       catPrincipal: 'Seguridad',
       subCategorias:  ['Camaras', 'Caja fuerte'],
-      filtros: 'Impresoras'
+      filtros: 'Alarmas'
     },
     {
       id: '8',
       nombre: 'Games',
       catPrincipal: 'Games',
       subCategorias: ['Teclado gamer', 'Silla gamer' ],
-      filtros: 'Impresoras'
+      filtros: 'Nintendo Switch Lite'
     }
 
   ];

@@ -13,19 +13,13 @@ import { CategoriaService } from 'src/app/services/categoria.services';
 })
 export class FiltrosComponent implements OnInit {
 
-  // @Output()
-  // propagar = new EventEmitter<FiltroModel[]>();
-
-// Llamar una funcion al presionar el a de subC en Categorias.
-// Pasarle la subC por parametro y filtrar los filtros por esa subC.
-// Pasar la variable a true.
-// En html filtros escribir un ngif que permita mostrar los respectivos filtros.
-
   // filtros: FiltroModel[] = [];
   // mostrarFiltros: boolean;
 
   @Input() filtro: FiltroModel[] = [];
   mostrarFiltros: boolean;
+
+  nombrefiltros: string[] = [];
 
 
   constructor(private productosService: ProductosService, private categoriaService: CategoriaService, private subcategoriaService: SubcategoriaService, private filtroService: FiltroService) {
@@ -38,6 +32,14 @@ export class FiltrosComponent implements OnInit {
 
     // this.filtros = this.filtroService.getFiltrosBySubC('Computadoras');
     // this.filtros = this.filtroService.getFiltros();
+  }
+
+  agregar(data: string) { // Agregamos el elemento
+    this.nombrefiltros.push(data);
+  }
+
+  quitar(data) { // Filtramos el elemento para que quede fuera
+    this.nombrefiltros = this.nombrefiltros.filter(s => s !== data);
   }
 
 
