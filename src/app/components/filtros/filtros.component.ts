@@ -18,7 +18,7 @@ export class FiltrosComponent implements OnInit {
 
   @Input() filtro: FiltroModel[] = [];
   mostrarFiltros: boolean;
-
+  productFiltro: any[] = [];
   nombrefiltros: string[] = [];
 
 
@@ -41,6 +41,16 @@ export class FiltrosComponent implements OnInit {
   quitar(data) { // Filtramos el elemento para que quede fuera
     this.nombrefiltros = this.nombrefiltros.filter(s => s !== data);
   }
+
+  buscarProductoByFiltroChecked(filtro: string) {
+
+    console.log(filtro);
+    this.productFiltro = this.productosService.getPrByFiltro( filtro );
+
+    return this.productFiltro;
+
+  }
+
 
 
 

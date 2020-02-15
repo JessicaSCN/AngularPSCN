@@ -52,6 +52,36 @@ filtroAny: any[] = [];
       subCategorias: 'PC'
     },
 
+    {
+      id: '6',
+      nombre: 'Acer',
+      titulo: 'Marcas',
+      catPrincipal: 'Computadoras',
+      subCategorias: 'Notebook'
+    },
+
+    {
+      id: '7',
+      nombre: 'HP',
+      titulo: 'Marcas',
+      catPrincipal: 'Computadoras',
+      subCategorias: 'Notebook'
+    },
+    {
+      id: '8',
+      nombre: 'Continua',
+      titulo: 'Tipos',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Con tinta'
+    },
+    {
+      id: '9',
+      nombre: 'Scanner',
+      titulo: 'Tipos',
+      catPrincipal: 'Impresoras',
+      subCategorias: 'Sin tinta'
+    },
+
 
 
   ];

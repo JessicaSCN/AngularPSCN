@@ -7,14 +7,17 @@
      <h2>Filtros</h2>    
      <hr> 
     <div id="Grupos">
-        <h5>Marcas</h5>
+        <!-- <h5>Marcas</h5> -->
         <hr>
+        <!-- (change)="$event.target.checked ? agregar(filtroD.nombre) : quitar(filtroD.nombre)"  -->
 
+<!-- <div *ngIf="filtroGrupo.titulo === 'Marcas'"> -->
         <div class="custom-control custom-checkbox" *ngFor="let filtroD of filtro; index as i" >
-            <input type="checkbox" (change)="$event.target.checked ? agregar(filtroD.nombre) : quitar(filtroD.nombre)" class="custom-control-input col-md-1" id="i" >
-                <label class="custom-control-label" for="{{i+1}} "> {{i+1}} {{filtroD.nombre}}</label> 
+            <input type="checkbox" (change)="buscarProductoByFiltroChecked(filtroD.nombre)" class="custom-control-input col-md-1" id="i" >
+                <label class="custom-control-label" for="i">{{filtroD.nombre}}</label> 
 
         </div>
+    <!-- </div> -->
         <hr>
 
         <!-- <h5>Color</h5>

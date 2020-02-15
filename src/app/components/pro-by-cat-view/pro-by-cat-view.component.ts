@@ -6,6 +6,7 @@ import { SubcategoriaService } from 'src/app/services/subcategoria.service';
 import { CategoriaService } from 'src/app/services/categoria.services';
 import { ProductosService } from 'src/app/services/productos.services';
 import { ActivatedRoute } from '@angular/router';
+import { FiltroModel } from '../../models/filtro.model';
 
 @Component({
   selector: 'app-pro-by-cat-view',
@@ -18,6 +19,7 @@ export class ProByCatViewComponent implements OnInit {
   // productos: ProductoModel[] = [];
 
   @Input() categoria: CategoriaModel[] = [];
+  @Input() filtroP: FiltroModel[] = [];
 
 
   constructor(public activatedRoute: ActivatedRoute, public productosService: ProductosService, private categoriaService: CategoriaService, private subcategoriaService: SubcategoriaService, public filtroService: FiltroService) { 

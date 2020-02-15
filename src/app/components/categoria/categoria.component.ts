@@ -26,9 +26,10 @@ export class CategoriaComponent implements OnInit {
 
   filtro: FiltroModel = null;
   filtros: FiltroModel[] = [];
-
+  productFiltro: any[] = [];
   categoriaDatos: any[] = [];
   filtroDatos: any[] = [];
+
   mostrarFiltros: boolean;
   flag: boolean;
 
@@ -94,6 +95,8 @@ return this.flag = false;
     console.log(this.filtroDatos);
     return this.filtroDatos;
   }
+
+
 
 
 

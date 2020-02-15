@@ -25,7 +25,7 @@
           </button>
           <div class="dropdown-menu" >
            
-            <a class="dropdown-item" (click)="buscarFiltroBySubC(categoria.subCategorias)" (click)="toggle()"  >{{categoria.subCategorias}}</a>
+            <a class="dropdown-item" (click)="buscarFiltroBySubC(sc.nombre)" (click)="toggle()" *ngFor="let sc of subCategorias" >{{sc.nombre}}</a>
           </div>
         </div> 
       </div>
@@ -42,7 +42,7 @@
           <div class="dropdown-menu" > 
             
 
-            <!-- <a class="dropdown-item" (click)="buscarFiltroBySubC(categoria.subCategorias)">{{categoria.subCategorias}}</a>   -->
+            <a class="dropdown-item" (click)="buscarFiltroBySubC(sc.nombre)" *ngFor="let sc of subCategorias">{{sc.nombre}}</a>   
         </div> 
         
       
@@ -61,7 +61,7 @@
  <app-filtros [filtro]="filtroDatos" *ngIf="!flag" > </app-filtros>
 </div>
   <div class="col-10">
-    <app-pro-by-cat-view [categoria]="categoriaDatos"></app-pro-by-cat-view>
+    <app-pro-by-cat-view [categoria]="categoriaDatos" [filtroP]="productFiltro"></app-pro-by-cat-view>
   </div>
 
 </div>
