@@ -107,4 +107,13 @@ filtroAny: any[] = [];
       return this.filtroAny;
 
      }
+
+     getFiltrosByCat(Categoria: string) {
+
+
+      this.filtroAny = this.filtro.filter(x => x.catPrincipal === Categoria );
+
+      return this.filtroAny;
+
+     }
 }

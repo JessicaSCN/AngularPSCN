@@ -15,20 +15,34 @@
               <!-- <a (click)="buscarFiltroBySubC(SC.nombre)"  *ngFor="let SC of subCategorias">{{SC.nombre}}</a>  -->
             <!-- </div> -->
         <!-- </div>  -->
+
+
     <div *ngIf="flag">
-         <div class="btn-group-vertical dropright mx-auto d-block" *ngFor="let categoria of categorias">
-          <button id="btnCat" type="button" class="btn btn-light" (click)="buscarProducto(categoria.catPrincipal)"  >
+      <div class="btn-group dropright btn-block" *ngFor="let categoria of categorias">
+          <button id="btnCat" type="button" class="btnCat btn" (click)="buscarProducto(categoria.catPrincipal)" (click)="buscarFiltroByCat(categoria.nombre)"  >
             {{categoria.catPrincipal}}
           </button>
-          <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btnCat btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <div class="dropdown-menu" >
-           
-            <a class="dropdown-item" (click)="buscarFiltroBySubC(sc.nombre)" (click)="toggle()" *ngFor="let sc of subCategorias" >{{sc.nombre}}</a>
+            <a class="dropdown-item"  (click)="toggle()" (click)="buscarFiltroBySubC(sc.nombre)" (click)="buscarProductoBySubC(sc.nombre)" *ngFor="let sc of subCategorias" >{{sc.nombre}}</a>
           </div>
-        </div> 
+      </div> 
+    </div>
+
+    <!-- <div class="btn-group dropright" *ngFor="let categoria of categorias">
+      <button type="button" class="btn btn-secondary" (click)="buscarProducto(categoria.catPrincipal)" (click)="buscarFiltroByCat(categoria.nombre)">
+        {{categoria.catPrincipal}}
+      </button>
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropright</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item"  (click)="toggle()" (click)="buscarFiltroBySubC(sc.nombre)" (click)="buscarProductoBySubC(sc.nombre)" *ngFor="let sc of subCategorias" >{{sc.nombre}}</a>
       </div>
+    </div> -->
+
         <!-- Prueba de boton cat -->
         
        <div class="dropdown" *ngIf="!flag" >
@@ -37,17 +51,13 @@
         </button>
         <div class="dropdown-menu" >
           
-          <button class="dropbtn dropright btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="buscarProducto(categoria.catPrincipal)" *ngFor="let categoria of categorias"  >{{categoria.catPrincipal}}</button> 
-          
+          <button class="dropbtn dropright btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="buscarProducto(categoria.catPrincipal)" (click)="buscarFiltroByCat(categoria.nombre)" *ngFor="let categoria of categorias">{{categoria.catPrincipal}}</button> 
+        
           <div class="dropdown-menu" > 
-            
-
-            <a class="dropdown-item" (click)="buscarFiltroBySubC(sc.nombre)" *ngFor="let sc of subCategorias">{{sc.nombre}}</a>   
-        </div> 
-        
       
-        
-        
+            <a class="dropdown-item" (click)="buscarFiltroBySubC(sc.nombre)" (click)="buscarProductoBySubC(sc.nombre)" *ngFor="let sc of subCategorias">{{sc.nombre}}</a>   
+        </div> 
+         
         </div>
       </div> 
 
@@ -57,13 +67,16 @@
   </div>
 
  <!-- Muestra el componente de productos por categoria -->
-<div >
- <app-filtros [filtro]="filtroDatos" *ngIf="!flag" > </app-filtros>
-</div>
+
   <div class="col-10">
     <app-pro-by-cat-view [categoria]="categoriaDatos" [filtroP]="productFiltro"></app-pro-by-cat-view>
   </div>
 
+ 
+  <div class="col-md-2" >
+    <app-filtros [filtro]="filtroDatos" *ngIf="!flag" > </app-filtros>
+   </div>
+  
 </div>
 
 

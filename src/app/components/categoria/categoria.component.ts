@@ -66,6 +66,14 @@ export class CategoriaComponent implements OnInit {
 
   }
 
+  buscarProductoBySubC(subC: string) {
+
+    console.log(subC);
+    this.categoriaDatos = this.productosService.getPrBySubC( subC );
+
+    return this.categoriaDatos;
+  }
+
  // Ocultar categorias y mostrar filtros
 toggle() {
 
@@ -94,6 +102,14 @@ return this.flag = false;
 
     console.log(this.filtroDatos);
     return this.filtroDatos;
+  }
+
+  buscarFiltroByCat(Categoria: string) {
+
+      this.filtroDatos = this.filtroService.getFiltrosByCat(Categoria);
+
+      console.log(this.filtroDatos);
+      return this.filtroDatos;
   }
 
 
