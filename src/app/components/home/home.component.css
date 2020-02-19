@@ -52,3 +52,9 @@ flip card
 .card-flip:hover .card-back {
   transform: rotateY(0deg);
 }
+
+.tb {
+
+color: rgb(25, 25, 117);
+
+}
