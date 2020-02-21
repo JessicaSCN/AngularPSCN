@@ -40,7 +40,14 @@ a {
 ====================== */
 
 /* Main Footer */
-footer .main-footer{	padding: 20px 0;	background: rgb(39, 39, 44); border: rgb(25, 25, 117);}
+footer .main-footer{	padding: 20px 0;	background: rgb(39, 39, 44) no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100% ;
+  }
 footer ul{	padding-left: 0;	list-style: none;}
 
 /* Copy Right Footer */
