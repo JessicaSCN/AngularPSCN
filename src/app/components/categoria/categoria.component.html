@@ -1,11 +1,20 @@
  
                            <!-- Categorias que se muestran  -->
 
-            
+               <!-- Regresar a categorias -->
+
+        <div class="col text-right" *ngIf="!flag">
+          <button routerLink="/productos" class="btn btn-success ">
+            <i class="fa fa-arrow-left"></i>
+            Categorías
+          </button>
+        </div>
                             
   <div class="row">
+    
                               
-    <div class="col-2" >                              
+    <div class="col-2" >             
+                       
        
       <!-- <div class="dropdown" *ngFor="let categoria of categorias ">
             <button class="dropbtn dropright btn-block" (click)="buscarProducto(categoria.catPrincipal)"  >{{categoria.catPrincipal}}</button> 
@@ -15,6 +24,9 @@
               <!-- <a (click)="buscarFiltroBySubC(SC.nombre)"  *ngFor="let SC of subCategorias">{{SC.nombre}}</a>  -->
             <!-- </div> -->
         <!-- </div>  -->
+
+     
+
 
 
     <div *ngIf="flag">
@@ -26,7 +38,7 @@
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <div class="dropdown-menu" >
-            <a class="dropdown-item"  (click)="toggle()" (click)="buscarFiltroBySubC(sc.nombre)" (click)="buscarProductoBySubC(sc.nombre)" *ngFor="let sc of subCategorias" >{{sc.nombre}}</a>
+            <a class="dropdown-item"  (click)="toggle()" (click)="buscarFiltroBySubC(subcat)" (click)="buscarProductoBySubC(subcat)" *ngFor="let subcat of categoria.subCategorias">{{subcat}}</a>
           </div>
       </div> 
     </div>
@@ -45,7 +57,7 @@
 
         <!-- Prueba de boton cat -->
         
-       <div class="dropdown" *ngIf="!flag" >
+       <!-- <div class="dropdown" *ngIf="!flag" >
         <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Categorías
         </button>
@@ -59,9 +71,9 @@
         </div> 
          
         </div>
-      </div> 
+      </div>  -->
 
-
+      <app-filtros [filtro]="filtroDatos" *ngIf="!flag" > </app-filtros>
         
 
   </div>
@@ -73,9 +85,9 @@
   </div>
 
  
-  <div class="col-md-2" >
+  <!-- <div class="col-md-2" >
     <app-filtros [filtro]="filtroDatos" *ngIf="!flag" > </app-filtros>
-   </div>
+   </div> -->
   
 </div>
 

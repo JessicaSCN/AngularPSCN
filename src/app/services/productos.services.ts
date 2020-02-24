@@ -54,7 +54,7 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '2', nombre: 'Xiaomi', img: 'assets/img/marcas/xiaomi.jpg' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Hogar', subCategorias: ['Hogar' ], filtros: 'Nuevo'},
+      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Celulares', subCategorias: ['Hogar' ], filtros: 'Nuevo'},
       mailing: false,
       oferta: true
     },
@@ -68,7 +68,7 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '3' , nombre: 'Iphone', img: 'assets/img/marcas/iphone.jpg' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Hogar', subCategorias: ['Hogar' ], filtros: 'Nuevo'},
+      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Celulares', subCategorias: ['Hogar' ], filtros: 'Nuevo'},
       mailing: true,
       oferta: false
     },
@@ -83,25 +83,11 @@ export class ProductosService {
       procentajeDescuento: 10,
       marca: { id: '1' , nombre: 'Sony', img: 'assets/img/marcas/sony.png' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Hogar', subCategorias: [ 'Hogar' ], filtros: 'Nuevo'},
-      mailing: true,
-      oferta: false
-    },
-    {
-      id: '5',
-      nombre: 'Ps4',
-      descripcion:
-        // tslint:disable-next-line: max-line-length
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero elit, vehicula sit amet condimentum ut, commodo a sapien. Suspendisse vitae tellus sit amet magna pellentesque faucibus in vel diam. Nam aliquam, eros eget aliquet laoreet, velit ipsum tincidunt eros, quis imperdiet sem lacus in dolor. Curabitur vel massa varius, volutpat purus et, consequat nisl. Etiam efficitur, arcu vitae faucibus vehicula, magna felis maximus arcu, ac commodo ex augue efficitur odio. Cras porttitor metus ac libero interdum, nec dapibus nisi mollis. Vivamus sodales felis arcu, quis finibus lectus aliquet eget.',
-      img: 'assets/img/ps4.png',
-      precio: 599,
-      procentajeDescuento: 10,
-      marca: { id: '1' , nombre: 'Sony', img: 'assets/img/marcas/sony.png' }
-      , activo: true,
-      categoria: {nombre: 'Games' , id: '1', catPrincipal: 'Games', subCategorias: [ 'PC' ], filtros: 'Nuevo'},
+      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Games', subCategorias: [ 'Hogar' ], filtros: 'Nuevo'},
       mailing: true,
       oferta: false
     }
+
 
   ];
 
