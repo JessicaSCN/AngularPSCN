@@ -17,6 +17,8 @@ import { AltaCategoriaComponent } from './components/admin/alta-categoria/alta-c
 import { FiltrosComponent } from './components/filtros/filtros.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { ProByCatViewComponent } from './components/pro-by-cat-view/pro-by-cat-view.component';
+import { AltaMarcaComponent } from './components/admin/alta-marca/alta-marca.component';
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent }, // canActivate: [AuthGuard]
@@ -31,6 +33,7 @@ const routes: Routes = [
    { path: 'admin/producto/nuevo', component: CrearProductoComponent },
    { path: 'admin/listado-categorias', component: AltaListadoCategoriaComponent },
    { path: 'admin/categoria/nuevo', component: AltaCategoriaComponent },
+   { path: 'admin/alta-marca', component: AltaMarcaComponent },
    { path: 'mailing', component: MailingComponent },
    { path: 'oferta', component: OfertaComponent },
    { path: 'servicios', component: ServiciosComponent },
