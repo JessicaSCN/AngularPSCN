@@ -20,12 +20,12 @@ export class ProductosService {
       nombre: 'Xbox',
       descripcion:
         'El poder más reconocido de Aquaman es la capacidad telepática para comunicarse con la vida marina, la cual puede convocar a grandes distancias.',
-      img: 'assets/img/xbox.jpg',
+      img: 'assets/img/Gaming/xbox.jpg',
       precio: 350,
       procentajeDescuento: 10,
       marca: { id: '0', nombre: 'Microsoft', img: 'assets/img/marcas/microsoft.jpg' }
       , activo: true,
-      categoria: {nombre: 'Consolas' , id: '1', catPrincipal: 'Games', subCategorias: ['Consola' ], filtros: 'Xbox'},
+      categoria: {nombre: 'Consolas' , id: '0', catPrincipal: 'Gaming', subCategorias: ['Consola' ], filtros: 'Xbox'},
       mailing: false,
       oferta: false
 
@@ -35,7 +35,7 @@ export class ProductosService {
       nombre: 'Television',
       descripcion:
         'El poder más reconocido de Aquaman es la capacidad telepática para comunicarse con la vida marina, la cual puede convocar a grandes distancias.',
-      img: 'assets/img/television.jpg',
+      img: 'assets/img/Monitores/television.jpg',
       precio: 399,
       procentajeDescuento: 10,
       marca: { id: '1'  , nombre: 'Sony', img: 'assets/img/marcas/sony.png' }
@@ -49,12 +49,12 @@ export class ProductosService {
       nombre: 'Celular Xiaomi',
       descripcion:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero elit, vehicula sit amet condimentum ut, commodo a sapien. Suspendisse vitae tellus sit amet magna pellentesque faucibus in vel diam. Nam aliquam, eros eget aliquet laoreet, velit ipsum tincidunt eros, quis imperdiet sem lacus in dolor. Curabitur vel massa varius, volutpat purus et, consequat nisl. Etiam efficitur, arcu vitae faucibus vehicula.',
-      img: 'assets/img/Xiaomi.jpg',
+      img: 'assets/img/Celulares/Xiaomi.jpg',
       precio: 199,
       procentajeDescuento: 10,
       marca: { id: '2', nombre: 'Xiaomi', img: 'assets/img/marcas/xiaomi.jpg' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Celulares', subCategorias: ['Hogar' ], filtros: 'Nuevo'},
+      categoria: {nombre: 'Hogar' , id: '2', catPrincipal: 'Celulares', subCategorias: ['Xiaomi' ], filtros: 'Nuevo'},
       mailing: false,
       oferta: true
     },
@@ -63,12 +63,12 @@ export class ProductosService {
       nombre: 'Iphone',
       // tslint:disable-next-line: max-line-length
       descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero elit, vehicula sit amet condimentum ut, commodo a sapien. Suspendisse vitae tellus sit amet magna pellentesque faucibus in vel diam. Nam aliquam, eros eget aliquet laoreet, velit ipsum tincidunt eros, quis imperdiet sem lacus in dolor. Curabitur vel massa varius, volutpat purus et, consequat nisl. Etiam efficitur, arcu vitae faucibus vehicula, magna felis maximus arcu, ac commodo ex augue efficitur odio. Cras porttitor metus ac libero interdum, nec dapibus nisi mollis. Vivamus sodales felis arcu, quis finibus lectus aliquet eget.' ,
-      img: 'assets/img/iphone.jfif',
+      img: 'assets/img/Celulares/iphone.jfif',
       precio: 899,
       procentajeDescuento: 10,
       marca: { id: '3' , nombre: 'Iphone', img: 'assets/img/marcas/iphone.jpg' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Celulares', subCategorias: ['Hogar' ], filtros: 'Nuevo'},
+      categoria: {nombre: 'Hogar' , id: '3', catPrincipal: 'Celulares', subCategorias: ['Hogar' ], filtros: 'Nuevo'},
       mailing: true,
       oferta: false
     },
@@ -78,12 +78,27 @@ export class ProductosService {
       descripcion:
         // tslint:disable-next-line: max-line-length
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero elit, vehicula sit amet condimentum ut, commodo a sapien. Suspendisse vitae tellus sit amet magna pellentesque faucibus in vel diam. Nam aliquam, eros eget aliquet laoreet, velit ipsum tincidunt eros, quis imperdiet sem lacus in dolor. Curabitur vel massa varius, volutpat purus et, consequat nisl. Etiam efficitur, arcu vitae faucibus vehicula, magna felis maximus arcu, ac commodo ex augue efficitur odio. Cras porttitor metus ac libero interdum, nec dapibus nisi mollis. Vivamus sodales felis arcu, quis finibus lectus aliquet eget.',
-      img: 'assets/img/ps4.png',
+      img: 'assets/img/Gaming/ps4.png',
       precio: 599,
       procentajeDescuento: 10,
-      marca: { id: '1' , nombre: 'Sony', img: 'assets/img/marcas/sony.png' }
+      marca: { id: '4' , nombre: 'Sony', img: 'assets/img/marcas/sony.png' }
       , activo: true,
-      categoria: {nombre: 'Hogar' , id: '1', catPrincipal: 'Games', subCategorias: [ 'Hogar' ], filtros: 'Nuevo'},
+      categoria: {nombre: 'Hogar' , id: '4', catPrincipal: 'Gaming', subCategorias: [ 'Hogar' ], filtros: 'Nuevo'},
+      mailing: true,
+      oferta: false
+    },
+    {
+      id: '5',
+      nombre: 'Teclado cougar',
+      descripcion:
+        // tslint:disable-next-line: max-line-length
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero elit, vehicula sit amet condimentum ut, commodo a sapien. Suspendisse vitae tellus sit amet magna pellentesque faucibus in vel diam. Nam aliquam, eros eget aliquet laoreet, velit ipsum tincidunt eros, quis imperdiet sem lacus in dolor. Curabitur vel massa varius, volutpat purus et, consequat nisl. Etiam efficitur, arcu vitae faucibus vehicula, magna felis maximus arcu, ac commodo ex augue efficitur odio. Cras porttitor metus ac libero interdum, nec dapibus nisi mollis. Vivamus sodales felis arcu, quis finibus lectus aliquet eget.',
+      img: 'assets/img/Gaming/tecladog.png',
+      precio: 89,
+      procentajeDescuento: 10,
+      marca: { id: '5' , nombre: 'Cougar', img: 'assets/img/marcas/sony.png' }
+      , activo: true,
+      categoria: {nombre: 'Gaming' , id: '5', catPrincipal: 'Gaming', subCategorias: [ 'Teclado gamer' ], filtros: 'Luces'},
       mailing: true,
       oferta: false
     }

@@ -66,8 +66,8 @@ export class CategoriaService {
     },
     {
       id: '8',
-      nombre: 'Games',
-      catPrincipal: 'Games',
+      nombre: 'Gaming',
+      catPrincipal: 'Gaming',
       subCategorias: ['Teclado gamer', 'Silla gamer' ],
       filtros: 'Nintendo Switch Lite'
     }
