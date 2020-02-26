@@ -19,7 +19,7 @@ export class AltaCategoriaComponent implements OnInit {
   categorias: CategoriaModel[];
   marcas: MarcaModel[];
 
-  constructor(private activatedRoute: ActivatedRoute, categoriaService: CategoriaService, marcaService: MarcasService) { 
+  constructor(private activatedRoute: ActivatedRoute, categoriaService: CategoriaService, marcaService: MarcasService) {
 
       // tslint:disable-next-line: deprecation
       this.activatedRoute.params.subscribe( params => {

@@ -18,6 +18,7 @@ import { FiltrosComponent } from './components/filtros/filtros.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { ProByCatViewComponent } from './components/pro-by-cat-view/pro-by-cat-view.component';
 import { AltaMarcaComponent } from './components/admin/alta-marca/alta-marca.component';
+import { ListadoMarcasComponent } from './components/admin/listado-marcas/listado-marcas.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
    { path: 'admin/listado-categorias', component: AltaListadoCategoriaComponent },
    { path: 'admin/categoria/nuevo', component: AltaCategoriaComponent },
    { path: 'admin/alta-marca', component: AltaMarcaComponent },
+   { path: 'admin/listado-marcas', component: ListadoMarcasComponent },
    { path: 'mailing', component: MailingComponent },
    { path: 'oferta', component: OfertaComponent },
    { path: 'servicios', component: ServiciosComponent },

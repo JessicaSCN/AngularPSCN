@@ -1,6 +1,6 @@
-export class MarcaModel{
+export class MarcaModel {
 
-    id: string
+    id: string;
     img: string;
     nombre: string;
 
