@@ -19,6 +19,8 @@ import { CategoriaComponent } from './components/categoria/categoria.component';
 import { ProByCatViewComponent } from './components/pro-by-cat-view/pro-by-cat-view.component';
 import { AltaMarcaComponent } from './components/admin/alta-marca/alta-marca.component';
 import { ListadoMarcasComponent } from './components/admin/listado-marcas/listado-marcas.component';
+import { ProByFiltroComponent } from './components/pro-by-filtro/pro-by-filtro.component';
+
 
 
 const routes: Routes = [

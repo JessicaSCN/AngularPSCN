@@ -27,6 +27,8 @@ export class CategoriaComponent implements OnInit {
   filtro: FiltroModel = null;
   filtros: FiltroModel[] = [];
   productFiltro: any[] = [];
+  Check: any[] = [];
+
   categoriaDatos: any[] = [];
   filtroDatos: any[] = [];
 
@@ -79,6 +81,10 @@ toggle() {
 
 return this.flag = false;
 
+}
+
+btnBackCategorias() {
+return this.flag = true;
 }
 
 

@@ -5,14 +5,12 @@ import { FiltroService } from '../../services/filtro.service';
 import { SubcategoriaService } from 'src/app/services/subcategoria.service';
 import { CategoriaService } from 'src/app/services/categoria.services';
 
-
 @Component({
   selector: 'app-filtros',
   templateUrl: './filtros.component.html',
   styleUrls: ['./filtros.component.css']
 })
 export class FiltrosComponent implements OnInit {
-
   // filtros: FiltroModel[] = [];
   // mostrarFiltros: boolean;
 
@@ -20,38 +18,40 @@ export class FiltrosComponent implements OnInit {
   mostrarFiltros: boolean;
   productFiltro: any[] = [];
   nombrefiltros: string[] = [];
+  isChecked: boolean;
 
-
-  constructor(private productosService: ProductosService, private categoriaService: CategoriaService, private subcategoriaService: SubcategoriaService, private filtroService: FiltroService) {
-
+  constructor(
+    private productosService: ProductosService,
+    private categoriaService: CategoriaService,
+    private subcategoriaService: SubcategoriaService,
+    private filtroService: FiltroService
+  ) {
     this.mostrarFiltros = false;
-
   }
 
   ngOnInit() {
-
     // this.filtros = this.filtroService.getFiltrosBySubC('Computadoras');
     // this.filtros = this.filtroService.getFiltros();
   }
 
-  agregar(data: string) { // Agregamos el elemento
+  agregar(data: string) {
+    // Agregamos el elemento
     this.nombrefiltros.push(data);
   }
 
-  quitar(data) { // Filtramos el elemento para que quede fuera
+  quitar(data) {
+    // Filtramos el elemento para que quede fuera
     this.nombrefiltros = this.nombrefiltros.filter(s => s !== data);
   }
 
-  buscarProductoByFiltroChecked(filtro: string) {
+  buscarProductoByFiltroChecked(filtro: string, isChecked: boolean) {
 
-    console.log(filtro);
-    this.productFiltro = this.productosService.getPrByFiltro( filtro );
+      console.log(filtro, isChecked);
+      // console.log(event.checked);
+      this.productFiltro = this.productosService.getPrByFiltro(filtro);
 
-    return this.productFiltro;
+      return this.productFiltro;
+
 
   }
-
-
-
-
 }

@@ -13,10 +13,14 @@
 
 <!-- <div *ngIf="filtroGrupo.titulo === 'Marcas'"> -->
         <div class="custom-control custom-checkbox" *ngFor="let filtroD of filtro" >
-            <input type="checkbox" (change)="buscarProductoByFiltroChecked(filtroD.nombre)" class="custom-control-input col-md-1" id="i_{{filtroD.id}}" >
+            <input type="checkbox" ngModel (ngModelChange)="buscarProductoByFiltroChecked(filtroD.nombre, $event)"  class="custom-control-input col-md-1" id="i_{{filtroD.id}}" >
                 <label class="custom-control-label" for="i_{{filtroD.id}}">{{filtroD.nombre}}</label> 
 
         </div>
+
+        <div class="col-10">
+            <app-pro-by-cat-view [filtroP]="productFiltro"></app-pro-by-cat-view>
+          </div>
     <!-- </div> -->
         <hr>
 

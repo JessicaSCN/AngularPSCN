@@ -1,0 +1,17 @@
+<div class="card-columns animated fadeIn fast">
+     
+    <div class="card " *ngFor="let producto of filtroP; let i = index" >
+      
+      <img [src]="producto.img" class="card-img-top" alt="..." />
+      <div class="card-body">
+        
+        <h5 class="card-title">{{producto.nombre}}</h5>
+        <h5 class="card-subtitle">{{producto.precio}}</h5>
+        <p class="card-text">
+          {{producto.descripcion}}
+        </p>
+        <button type="button" [routerLink]="['/producto', producto.id]" class="btn btn-block btn-outline-primary">Ver más...</button>
+      </div>
+    </div>
+  </div>
+

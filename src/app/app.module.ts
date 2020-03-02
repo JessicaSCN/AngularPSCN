@@ -50,6 +50,7 @@ import { FiltroService } from './services/filtro.service';
 import { ProByCatViewComponent } from './components/pro-by-cat-view/pro-by-cat-view.component';
 import { AltaMarcaComponent } from './components/admin/alta-marca/alta-marca.component';
 import { ListadoMarcasComponent } from './components/admin/listado-marcas/listado-marcas.component';
+import { ProByFiltroComponent } from './components/pro-by-filtro/pro-by-filtro.component';
 
 
 
@@ -77,7 +78,8 @@ import { ListadoMarcasComponent } from './components/admin/listado-marcas/listad
     CatPipe,
     ProByCatViewComponent,
     AltaMarcaComponent,
-    ListadoMarcasComponent
+    ListadoMarcasComponent,
+    ProByFiltroComponent
   ],
   imports: [
     BrowserModule,

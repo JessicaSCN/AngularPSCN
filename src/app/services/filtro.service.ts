@@ -81,6 +81,20 @@ filtroAny: any[] = [];
       catPrincipal: 'Impresoras',
       subCategorias: 'Sin tinta'
     },
+    {
+      id: '10',
+      nombre: 'Luces',
+      titulo: 'Teclados',
+      catPrincipal: 'Gaming',
+      subCategorias: 'Teclado gamer'
+    },
+    {
+      id: '11',
+      nombre: 'Sin Luces',
+      titulo: 'Teclados',
+      catPrincipal: 'Gaming',
+      subCategorias: 'Teclado gamer'
+    }
 
 
 

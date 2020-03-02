@@ -92,13 +92,28 @@ export class ProductosService {
       nombre: 'Teclado cougar',
       descripcion:
         // tslint:disable-next-line: max-line-length
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero elit, vehicula sit amet condimentum ut, commodo a sapien. Suspendisse vitae tellus sit amet magna pellentesque faucibus in vel diam. Nam aliquam, eros eget aliquet laoreet, velit ipsum tincidunt eros, quis imperdiet sem lacus in dolor. Curabitur vel massa varius, volutpat purus et, consequat nisl. Etiam efficitur, arcu vitae faucibus vehicula, magna felis maximus arcu, ac commodo ex augue efficitur odio. Cras porttitor metus ac libero interdum, nec dapibus nisi mollis. Vivamus sodales felis arcu, quis finibus lectus aliquet eget.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero elit.',
       img: 'assets/img/Gaming/tecladog.png',
       precio: 89,
       procentajeDescuento: 10,
       marca: { id: '5' , nombre: 'Cougar', img: 'assets/img/marcas/sony.png' }
       , activo: true,
       categoria: {nombre: 'Gaming' , id: '5', catPrincipal: 'Gaming', subCategorias: [ 'Teclado gamer' ], filtros: 'Luces'},
+      mailing: true,
+      oferta: false
+    },
+    {
+      id: '6',
+      nombre: 'Teclado RedDragon',
+      descripcion:
+        // tslint:disable-next-line: max-line-length
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      img: 'assets/img/Gaming/TecladoRedDragon.jpg',
+      precio: 49,
+      procentajeDescuento: 10,
+      marca: { id: '6' , nombre: 'Reddragon', img: 'assets/img/marcas/sony.png' }
+      , activo: true,
+      categoria: {nombre: 'Gaming' , id: '6', catPrincipal: 'Gaming', subCategorias: [ 'Teclado gamer' ], filtros: 'Sin Luces'},
       mailing: true,
       oferta: false
     }
@@ -178,7 +193,7 @@ export class ProductosService {
 
       this.producto = this.productos.filter(x => x.categoria.filtros === Filtro);
 
-      console.log('Producto filtrado' + this.producto);
+      console.log('Producto filtrado', this.producto);
       return this.producto;
      }
 
