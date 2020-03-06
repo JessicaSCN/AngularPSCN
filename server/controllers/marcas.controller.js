@@ -36,12 +36,15 @@ marcaCtrl.updateMarca = async (req, res) => {
         categoria: req.body.categoria
     };
 
-    Marca.findByIdAndUpdate(id, {$set: marca}, {new: true});
+    await Marca.findByIdAndUpdate(id, {$set: marca}, {new: true});
+    res.json({status: "Marca updated"});
 
 }
 
 marcaCtrl.deleteMarca = async (req, res) => {
 
+    await Marca.findByIdAndRemove(req.params.id);
+    res.json({status: "Marca deleted"});
 
 }
 

@@ -24,15 +24,41 @@ export class MarcasService {
     }
   ];
 
+  selectedMarca: MarcaModel;
+  marcas: MarcaModel[];
+  readonly URL_API = 'http://localhost:3000/api/marcas';
+
   public url = '';
 
   constructor(private http: HttpClient) {
-    console.log('Hola');
+
   }
 
+  // getMarcas() {
+  //   return this.marcas;
+  // }
+
+  // Http server
+
   getMarcas() {
-    return this.marcas;
+    return this.http.get(this.URL_API);
+
   }
+
+postMarca(Marca: MarcaModel) {
+  return this.http.post(this.URL_API, Marca);
+
+}
+
+putMarca(marca: MarcaModel) {
+  return this.http.put(this.URL_API + `/${marca.id}`, marca);
+
+}
+
+deleteMarca(id: string) {
+  return this.http.delete(this.URL_API + `/${id}`);
+
+}
 
   getCategoriaById(id: string): MarcaModel {
     return this.marcas.filter(x => x.id.toString() == id)[0];
