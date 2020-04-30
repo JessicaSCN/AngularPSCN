@@ -8,7 +8,7 @@
     "bootstrap": "^4.4.1",
     "express": "^4.17.1",
     "firebase": "^7.10.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mongoose": "^5.9.3",
     "morgan": "^1.9.1",
     "mssql": "^6.1.0",
